@@ -1,30 +1,79 @@
 <header class="header">
-  <div class="nav">
-    <a href=""><img src="./images/hero-header/logo-mobile.png" alt="Лого компании IceCream" /></a>
-    <ul class="nav__list">
-      <li class="nav__item"><a class="nav__link" href="">Home</a></li>
-      <li class="nav__item"><a class="nav__link" href="">About us</a></li>
-      <li class="nav__item"><a class="nav__link" href="">How it's made?</a></li>
-      <li class="nav__item"><a class="nav__link" href="">Our products</a></li>
-      <li class="nav__item"><a class="nav__link" href="">Contact</a></li>
-    </ul>
+  <div class="container">
+    <nav class="nav">
+      <a class="nav__logo" href="">
+        <picture>
+          <source
+            srcset="
+              ./images/hero-header/logo-desktop.webp   1x,
+              ./images/hero-header/logo-desktop.png    1x,
+              ./images/hero-header/logo-desktop2x.webp 2x,
+              ./images/hero-header/logo-desktop2x.png  2x
+            "
+            media="(min-width: 1280px)"
+          />
+          <source
+            srcset="
+              ./images/hero-header/logo-tablet.webp    1x,
+              ./images/hero-header/logo-tablet.png     1x,
+              ./images/hero-header/logo-tablet@2x.webp 2x,
+              ./images/hero-header/logo-tablet@2x.png  2x
+            "
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="
+              ./images/hero-header/logo-mobile.webp    1x,
+              ./images/hero-header/logo-mobile.png     1x,
+              ./images/hero-header/logo-mobile@2x.webp 2x,
+              ./images/hero-header/logo-mobile@2x.png  2x
+            "
+            media="(min-width: 320px)"
+          />
+
+          <img src="./images/hero-header/logo-mobile.png" alt="Лого компании IceCream" />
+        </picture>
+      </a>
+      <button class="nav__btn" type="button" data-menu-open>
+        <svg class="nav__icon-open">
+          <use href="./images/sprite.svg#icon-burger" width="20" height="12"></use>
+        </svg>
+      </button>
+      <div class="nav__box" data-menu>
+        <button class="nav__btn" type="button" data-menu-close>
+          <svg class="nav__icon" width="14" height="14">
+            <use href="./images/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link current" href="">Home</a></li>
+          <li class="nav__item"><a class="nav__link" href="">About us</a></li>
+          <li class="nav__item"><a class="nav__link" href="">How it's made?</a></li>
+          <li class="nav__item"><a class="nav__link" href="">Our products</a></li>
+          <li class="nav__item"><a class="nav__link" href="">Contact</a></li>
+        </ul>
+        <button class="btn header__btn" type="button">Buy now</button>
+      </div>
+    </nav>
   </div>
-  <button type="button">Buy now</button>
 </header>
 <section class="hero">
-  <h1 class="hero__title">ice cream made with <span>passion</span></h1>
-  <button type="button"><a href="">Products</a></button>
-  <button type="button"><a href="">How it's made?</a></button>
-  <img src="./images/hero-header/milk-tablet.png" alt="Банка с молоком" />
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-    labore et
-  </p>
-  <svg widt="15" height="15">
-    <use href="./images/sprite.svg#icon-arrow-forward"></use>
-  </svg>
-  <img src="./images/hero-header/icecream-mobile.png" alt="Шестислойное мороженко" />
-  <span>16</span>
-  <span>23</span>
-  <img src="./images/hero-header/girl-tablet.png" alt="" />
+  <div class="container">
+    <h1 class="hero__title">ice cream made with<span>passion</span></h1>
+    <button type="button"><a href="">Products</a></button>
+    <button type="button"><a href="">How it's made?</a></button>
+    <img src="./images/hero-header/milk-tablet.png" alt="Банка с молоком" />
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+      labore et
+    </p>
+    <svg>
+      <use href="./images/sprite.svg#icon-arrow-forward" widt="15" height="15"></use>
+    </svg>
+    <img src="./images/hero-header/icecream-mobile.png" alt="Шестислойное мороженко" />
+    <span>16</span>
+    <span>23</span>
+    <img src="./images/hero-header/girl-tablet.png" alt="" />
+  </div>
 </section>

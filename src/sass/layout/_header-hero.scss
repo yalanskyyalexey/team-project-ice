@@ -1,4 +1,85 @@
+.btn {
+  padding-left: 37px;
+  padding-right: 37px;
+  border-radius: 22px;
+  border: none;
+  cursor: pointer;
+}
+
 .header,
 .hero {
   background-color: $second-bg-color;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  padding-top: 6px;
+}
+
+.nav__btn {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  fill: $accent;
+}
+
+.nav__icon-open {
+  height: 14px;
+  width: 20px;
+}
+
+.nav__box {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  height: 100%;
+  width: 250px;
+  background-color: #e17992;
+
+  transform: translateX(100%);
+}
+.nav__box.is-open {
+  transform: translateX(0);
+}
+.nav__link {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.29;
+
+  color: #ffffff;
+  &.current {
+    color: $accent;
+  }
+}
+.header__btn {
+  height: 44px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+  color: $accent;
+}
+.hero__title {
+  font-family: $second-font;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.15;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+.hero__title span {
+  font-family: $second-font;
+  font-size: 48px;
+  line-height: 0.965;
+  /* or 52px */
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: #d41443;
 }
