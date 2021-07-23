@@ -4,10 +4,14 @@
  */
 
 // Стили для файла с примером HTML-фрагмента
+@import './utils/vars';
+@import './base/common';
+@import './base/reset';
+@import './utils/_hidden';
 @import './layout/header-hero';
-@import './layout/_advantages';
-@import './layout/_about';
 @import './layout/products';
+@import './layout/_about';
+@import './layout/_advantages';
 @import './layout/gallery';
 @import './layout/_customer-reviews';
 @import './layout/_contacts';
