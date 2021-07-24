@@ -6,23 +6,34 @@
     padding-left: 50px;
     padding-right: 50px;
   }
+  
 }
 
 
 .contact-list{ 
   margin-bottom: 55px;
-
-
-
+  @media screen and (min-width: 768px){
+    display: flex;
+    margin-bottom: 81px;
+  }
   &__item {
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 43px 20px;
     background: $main-bg-color;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
-    // display: flex;
-    // flex-direction: column;
     &:not(:last-child) {
       margin-bottom: 20px;
+      @media screen and (min-width: 768px){
+        margin-bottom: unset;
+        margin-right: 20px;
+      }
+    }
+    @media screen and (min-width: 768px){
+      padding: 50px 32px;
+      width: 100%;
     }
   }
   &__title {
@@ -35,12 +46,14 @@
     font-style: normal;
     font-size: 12px;
     line-height: 1.83;
-    // display: flex;
-    // align-items: center;
-    // text-align: center;
     text-transform: uppercase;
     color: $main-bg-color;
     background-color: #F0D1A5;
+    @media screen and (min-width: 768px){
+      font-size: 16px;
+      line-height: 1.88;
+      margin-bottom: 30px;
+    }
   }
   &__title.colored{
       background-color: #C2E297;
@@ -51,6 +64,12 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 1.83;
+    @media screen and (min-width: 768px){
+      font-size: 14px;
+      line-height: 1.86;
+      margin-bottom: 14px;
+      
+    }
   }
   &__text {
     margin-bottom: 25px;
@@ -58,6 +77,10 @@
     font-weight: 500;
     font-size: 12px;
     color: $second-text-color;
+    @media screen and (min-width: 768px){
+      font-size: 14px;
+      line-height: 1.64;
+    }
       &::after {
         display: block;
         content: "";
@@ -66,6 +89,10 @@
         border: 1px solid #E1E1E1;
         margin-bottom: 25px;
         margin-top: 25px;
+        @media screen and (min-width: 768px){
+          margin-bottom: 30px;
+          margin-top: 30px;
+        }
       }
   }
 
@@ -74,18 +101,28 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 1.83;
-    
+    @media screen and (min-width: 768px){
+      font-size: 14px;
+      line-height: 1.86;
+    }
   }
   &__working-time {
     font-weight: 500;
     font-size: 12px;
     line-height: 1.83;
     color: $section-text-color;
+    @media screen and (min-width: 768px){
+      font-size: 14px;
+      line-height: 1.64;
+    }
   }
 
   // разобраться с отступом
   &__working-time:not(:last-child) {
     margin-bottom: 10px;
+    @media screen and (min-width: 768px){
+      margin-bottom: 15px;
+    }
   }
   &__link {
     display: block;
@@ -93,6 +130,10 @@
     font-weight: 500;
     font-size: 12px;
     color: $second-text-color;
+    @media screen and (min-width: 768px){
+      font-size: 14px;
+      line-height: 1.64;
+    }
       
   }
 }
@@ -105,4 +146,8 @@
   border: 1px solid #E1E1E1;
   margin-bottom: 25px;
   margin-top: 25px;
+  @media screen and (min-width: 768px){
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
 }
