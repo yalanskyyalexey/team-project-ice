@@ -1,30 +1,199 @@
 <header class="header">
-  <div class="nav">
-    <a href=""><img src="./images/hero-header/logo-mobile.png" alt="Лого компании IceCream" /></a>
-    <ul class="nav__list">
-      <li class="nav__item"><a class="nav__link" href="">Home</a></li>
-      <li class="nav__item"><a class="nav__link" href="">About us</a></li>
-      <li class="nav__item"><a class="nav__link" href="">How it's made?</a></li>
-      <li class="nav__item"><a class="nav__link" href="">Our products</a></li>
-      <li class="nav__item"><a class="nav__link" href="">Contact</a></li>
-    </ul>
+  <div class="container">
+    <nav class="nav">
+      <a class="nav__logo" href="">
+        <picture>
+          <source
+            srcset="
+              ./images/hero-header/logo-desktop.webp   1x,
+              ./images/hero-header/logo-desktop.png    1x,
+              ./images/hero-header/logo-desktop2x.webp 2x,
+              ./images/hero-header/logo-desktop2x.png  2x
+            "
+            media="(min-width: 1280px)"
+          />
+          <source
+            srcset="
+              ./images/hero-header/logo-tablet.webp    1x,
+              ./images/hero-header/logo-tablet.png     1x,
+              ./images/hero-header/logo-tablet@2x.webp 2x,
+              ./images/hero-header/logo-tablet@2x.png  2x
+            "
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="
+              ./images/hero-header/logo-mobile.webp    1x,
+              ./images/hero-header/logo-mobile.png     1x,
+              ./images/hero-header/logo-mobile@2x.webp 2x,
+              ./images/hero-header/logo-mobile@2x.png  2x
+            "
+            media="(min-width: 320px)"
+          />
+
+          <img src="./images/hero-header/logo-mobile.png" alt="Лого компании IceCream" />
+        </picture>
+      </a>
+      <button class="nav__btn" type="button" data-menu-open>
+        <svg class="nav__icon-open">
+          <use href="./images/sprite.svg#icon-burger" width="20" height="12"></use>
+        </svg>
+      </button>
+      <div class="nav__box" data-menu>
+        <button class="nav__btn" type="button" data-menu-close>
+          <svg class="nav__icon-close" width="14" height="14">
+            <use href="./images/sprite.svg#icon-close" width="14" height="14"></use>
+          </svg>
+        </button>
+
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link current" href="">Home</a></li>
+          <li class="nav__item"><a class="nav__link" href="">About us</a></li>
+          <li class="nav__item"><a class="nav__link" href="">How it's made?</a></li>
+          <li class="nav__item"><a class="nav__link" href="">Our products</a></li>
+          <li class="nav__item"><a class="nav__link" href="">Contact</a></li>
+        </ul>
+        <button class="btn header__btn btn__light" type="button">
+          Buy now
+          <svg class="btn__arrow">
+            <use href="./images/sprite.svg#icon-vector-btn-pink" width="5" height="8"></use>
+          </svg>
+        </button>
+      </div>
+    </nav>
   </div>
-  <button type="button">Buy now</button>
 </header>
+<!--   hero -->
 <section class="hero">
-  <h1 class="hero__title">ice cream made with <span>passion</span></h1>
-  <button type="button"><a href="">Products</a></button>
-  <button type="button"><a href="">How it's made?</a></button>
-  <img src="./images/hero-header/milk-tablet.png" alt="Банка с молоком" />
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-    labore et
-  </p>
-  <svg widt="15" height="15">
-    <use href="./images/sprite.svg#icon-arrow-forward"></use>
-  </svg>
-  <img src="./images/hero-header/icecream-mobile.png" alt="Шестислойное мороженко" />
-  <span>16</span>
-  <span>23</span>
-  <img src="./images/hero-header/girl-tablet.png" alt="" />
+  <div class="container">
+    <div class="hero__left">
+      <h1 class="hero__title">ice cream made with<span>passion</span></h1>
+      <div class="hero__btns">
+        <button class="hero__btn btn__accent" type="button"><a href="">Products</a></button>
+        <button class="hero__btn btn__light" type="button"><a href="">How it's made?</a></button>
+      </div>
+      <div class="hero__left-bottom">
+        <picture class="hero__picture--milk">
+          <source
+            srcset="
+              ./images/hero-header/milk-desktop.webp    1x,
+              ./images/hero-header/milk-desktop.png     1x,
+              ./images/hero-header/milk-desktop@2x.webp 2x,
+              ./images/hero-header/milk-desktop@2x.png  2x
+            "
+            media="(min-width: 1280px)"
+          />
+          <source
+            srcset="
+              ./images/hero-header/milk-tablet.webp    1x,
+              ./images/hero-header/milk-tablet.png     1x,
+              ./images/hero-header/milk-tablet@2x.webp 2x,
+              ./images/hero-header/milk-tablet@2x.png  2x
+            "
+            media="(min-width: 768px)"
+          />
+
+          <img src="./images/hero-header/milk-tablet.png" alt="Банка с молоком" />
+        </picture>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et
+        </p>
+        <svg>
+          <use href="./images/sprite.svg#icon-arrow-forward" widt="15" height="15"></use>
+        </svg>
+      </div>
+    </div>
+    <picture class="hero__picture--icecream">
+      <source
+        srcset="
+          ./images/hero-header/icecream-desktop.webp    1x,
+          ./images/hero-header/icecream-desktop.png     1x,
+          ./images/hero-header/icecream-desktop@2x.webp 2x,
+          ./images/hero-header/icecream-desktop@2x.png  2x
+        "
+        media="(min-width: 1280px)"
+      />
+      <source
+        srcset="
+          ./images/hero-header/icecream-tablet.webp    1x,
+          ./images/hero-header/icecream-tablet.png     1x,
+          ./images/hero-header/icecream-tablet@2x.webp 2x,
+          ./images/hero-header/icecream-tablet@2x.png  2x
+        "
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="
+          ./images/hero-header/icecream-mobile.webp    1x,
+          ./images/hero-header/icecream-mobile.png     1x,
+          ./images/hero-header/icecream-mobile@2x.webp 2x,
+          ./images/hero-header/icecream-mobile@2x.png  2x
+        "
+        media="(min-width: 320px)"
+      />
+
+      <img src="./images/hero-header/icecream-mobile.png" alt="Шестислойное мороженко" />
+    </picture>
+
+    <picture class="hero__picture--ellipse">
+      <source
+        srcset="
+          ./images/hero-header/ellipse-desktop.webp    1x,
+          ./images/hero-header/ellipse-desktop.png     1x,
+          ./images/hero-header/ellipse-desktop@2x.webp 2x,
+          ./images/hero-header/ellipse-desktop@2x.png  2x
+        "
+        media="(min-width: 1280px)"
+      />
+      <source
+        srcset="
+          ./images/hero-header/ellipse-tablet.webp    1x,
+          ./images/hero-header/ellipse-tablet.png     1x,
+          ./images/hero-header/ellipse-tablet@2x.webp 2x,
+          ./images/hero-header/ellipse-tablet@2x.png  2x
+        "
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="
+          ./images/hero-header/ellipse-mobile.webp    1x,
+          ./images/hero-header/ellipse-mobile.png     1x,
+          ./images/hero-header/ellipse-mobile@2x.webp 2x,
+          ./images/hero-header/ellipse-mobile@2x.png  2x
+        "
+        media="(min-width: 320px)"
+      />
+
+      <img src="./images/hero-header/ellipse-mobile.png" alt="Розовый круг" />
+    </picture>
+    <div class="hero__right">
+      <span>16</span>
+      <span>23</span>
+
+      <picture class="hero__picture--girl">
+        <source
+          srcset="
+            ./images/hero-header/girl-desktop.webp    1x,
+            ./images/hero-header/girl-desktop.png     1x,
+            ./images/hero-header/girl-desktop@2x.webp 2x,
+            ./images/hero-header/girl-desktop@2x.png  2x
+          "
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="
+            ./images/hero-header/girl-tablet.webp    1x,
+            ./images/hero-header/girl-tablet.png     1x,
+            ./images/hero-header/girl-tablet@2x.webp 2x,
+            ./images/hero-header/girl-tablet@2x.png  2x
+          "
+          media="(min-width: 768px)"
+        />
+
+        <img src="./images/hero-header/girl-tablet.png" alt="Девушка ест мороженое" />
+      </picture>
+    </div>
+  </div>
 </section>
