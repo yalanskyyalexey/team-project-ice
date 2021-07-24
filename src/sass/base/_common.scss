@@ -6,3 +6,39 @@ body {
   line-height: 1.5;
   letter-spacing: 0.04em;
 }
+.btn {
+  padding-left: 37px;
+  padding-right: 37px;
+  border-radius: 22px;
+  height: 44px;
+
+  border: none;
+  cursor: pointer;
+
+  font-size: 8px;
+  line-height: 10px;
+
+  &__arrow {
+    margin-left: 14px;
+    width: 5px;
+    height: 8px;
+  }
+  &__accent {
+    background-color: $accent;
+    &:hover {
+      background-color: #c7133e;
+    }
+    & a {
+      color: #ffffff;
+    }
+  }
+  &__light {
+    background-color: #ffffff;
+    &:hover {
+      background-color: #ecebeb;
+    }
+    & a {
+      color: $accent;
+    }
+  }
+}
