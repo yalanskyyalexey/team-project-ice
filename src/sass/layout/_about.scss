@@ -113,8 +113,18 @@
       width: 463px;
     }
   }
+  &__btn {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.31;
+  }
 }
 
+.about-description__btn-icon {
+  margin-left: 14px;
+  width: 5px;
+  height: 8px;
+}
 .about-description__right {
   width: 340px;
 }
