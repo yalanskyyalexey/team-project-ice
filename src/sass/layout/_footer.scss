@@ -12,6 +12,11 @@
     line-height: 1.17;
     text-transform: uppercase;
     color: $section-text-color;
+    @media screen and (min-width: 768px){
+      font-size: 26px;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
   }
   &__tittle {
     width: 200px;
@@ -23,6 +28,11 @@
     line-height: 1.15;
     text-transform: uppercase;
     color: $accent;
+    @media screen and (min-width: 768px){
+      font-size: 48px;
+      line-height: 1.15;
+      letter-spacing: 0.06em;
+    }
   }
   &__contact {
     font-style: normal;
@@ -30,6 +40,10 @@
     font-size: 12px;
     line-height: 1.83;
     text-align: right;
+    @media screen and (min-width: 768px){
+      font-size: 14px;
+      line-height: 1.86;
+    }
   }
   &__contact-link {
     font-style: normal;
@@ -58,6 +72,10 @@
   }
   &__icon {
     fill: #FEA5BB;
+    @media screen and (min-width: 768px){
+      width: 34px;
+      height: 34px;
+    }
   }
   &__icon:hover {
     fill: $accent;
@@ -67,9 +85,6 @@
 .footer-below {
   background-color: #FFF5F6;
   padding-bottom: 25px;
-  
-  
-  
 }
 .footer-copy {
   width: 150px;
@@ -78,4 +93,15 @@
   font-style: normal;
   font-weight: 700;
   color: $second-text-color;
+  @media screen and (min-width: 768px){
+      width: unset;
+      text-align: center;
+    }
+}
+
+.footer-box {
+  @media screen and (min-width: 768px){
+      display: flex;
+      justify-content: space-between;
+    }
 }
