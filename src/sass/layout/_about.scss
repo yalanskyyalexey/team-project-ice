@@ -17,7 +17,7 @@
   @media screen and (min-width: 1200px) {
     padding-top: 125px;
     background-image: url(../images/about/milkbg-desktop.png);
-    background-position: bottom;
+    background-position: 100% 100%;
     background-size: 100%, 100%;
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
@@ -27,11 +27,13 @@
   }
   &__pre-title {
     font-family: $second-font;
+    font-weight: 400;
     font-size: 18px;
     line-height: 1.17;
     color: $section-text-color;
     text-transform: uppercase;
     text-align: center;
+    letter-spacing: 0.04em;
     margin-bottom: 15px;
     @media screen and (min-width: 768px) {
       font-size: 26px;
@@ -41,6 +43,7 @@
   }
   &__title {
     font-family: $second-font;
+    font-weight: 400;
     font-size: 34px;
     line-height: 1.15;
     letter-spacing: 0.04em;
@@ -59,26 +62,24 @@
     }
   }
   &-description {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     @media screen and (min-width: 768px) {
-      //   flex-direction: unset;
+      display: flex;
       flex-direction: row;
-      align-items: flex-start;
     }
+  }
+  &-description img {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &-description__right {
-    width: 340px;
+    padding-left: 30px;
+    padding-right: 30px;
     @media screen and (min-width: 768px) {
-      margin-top: 50px;
-      padding-right: unset;
+      width: 340px;
       margin-left: 17px;
-    }
-    @media screen and (min-width: 1200px) {
-      margin-top: 25px;
-      //   margin-left: 74px;
+      padding-left: unset;
+      padding-right: unset;
     }
   }
   &-description__info {
@@ -124,7 +125,4 @@
   margin-left: 14px;
   width: 5px;
   height: 8px;
-}
-.about-description__right {
-  width: 340px;
 }
