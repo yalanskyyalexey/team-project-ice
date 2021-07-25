@@ -58,9 +58,17 @@
       </a>
       <button class="nav__btn" type="button" data-menu-open>
         <svg class="nav__icon-open">
-          <use href="./images/sprite.svg#icon-burger" width="20" height="12"></use>
+          <use href="./images/sprite.svg#icon-burger"></use>
         </svg>
       </button>
+
+      <button class="btn header__btn--mob btn__light" type="button">
+        Buy now
+        <svg class="btn__arrow">
+          <use href="./images/sprite.svg#icon-vector-btn-pink" width="5" height="8"></use>
+        </svg>
+      </button>
+
       <div class="nav__box" data-menu>
         <button class="nav__btn" type="button" data-menu-close>
           <svg class="nav__icon-close" width="14" height="14">
@@ -133,13 +141,17 @@
           <img src="./images/hero-header/milk-tablet.png" alt="Банка с молоком" />
         </picture>
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et
-        </p>
-        <svg>
-          <use href="./images/sprite.svg#icon-arrow-forward" width="15" height="15"></use>
-        </svg>
+        <div class="hero__text-box">
+          <p class="hero__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et
+          </p>
+          <a class="hero__link-arrow" href="">
+            <svg class="icon-arrow">
+              <use href="./images/sprite.svg#icon-arrow-forward"></use>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
     <picture class="hero__picture--icecream">
@@ -252,9 +264,20 @@
       <img src="./images/hero-header/ellipse-mobile.png" alt="Розовый круг" />
     </picture>
     <div class="hero__right">
-      <span>16</span>
-      <span>23</span>
-
+      <!-- <ul class="hero__branches">
+        <li class="hero__cafes">16</li>
+        <li class="hero__food-trucks">23</li>
+      </ul> -->
+      <div class="hero__branches">
+        <div class="hero__branches-item">
+          <span class="hero__cafes">16</span>
+          <div class="hero__circle"></div>
+        </div>
+        <div class="hero__branches-item">
+          <span class="hero__food-trucks">23</span>
+          <div class="hero__circle"></div>
+        </div>
+      </div>
       <picture class="hero__picture--girl">
         <source
           srcset="
