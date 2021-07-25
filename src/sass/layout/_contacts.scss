@@ -1,5 +1,9 @@
 .contact {
-  background-color: #FFF5F6;
+  background-image: linear-gradient(
+    to top,
+    #FFF5F6 92%,
+    #ffffff 8%
+  );
   padding-top: 43px;
   padding-bottom: 57px;
   @media screen and (max-width: 480px){
@@ -8,6 +12,22 @@
   }
   @media screen and (min-width: 768px) {
     padding-bottom: 79px;
+    background-image: linear-gradient(
+    to top,
+    #FFF5F6 84%,
+    #ffffff 16%
+  );
+  }
+  @media screen and (min-width: 1280px) {
+    background-image:url(../images/contacts/contacts-bg.png),
+    linear-gradient(
+    to top,
+    #FFF5F6 84%,
+    #ffffff 16%);
+    background-repeat: no-repeat;
+    background-position: 100% 40%;
+    background-size: contain;
+
   }
 }
 
@@ -16,6 +36,7 @@
   margin-bottom: 55px;
   @media screen and (min-width: 768px){
     display: flex;
+    justify-content: space-between;
     margin-bottom: 81px;
   }
   &__item {
@@ -36,6 +57,8 @@
     @media screen and (min-width: 768px){
       padding: 50px 32px;
       width: 100%;
+      margin-left: unset;
+      margin-right: unset;
     }
   }
   &__title {
