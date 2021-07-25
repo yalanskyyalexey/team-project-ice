@@ -15,30 +15,30 @@ body {
   border: none;
   cursor: pointer;
 
-  font-size: 8px;
-  line-height: 10px;
-
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.28;
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    line-height: 1.31;
+  }
   &__arrow {
     margin-left: 14px;
     width: 5px;
     height: 8px;
   }
   &__accent {
+    color: #ffffff;
     background-color: $accent;
     &:hover {
       background-color: #c7133e;
     }
-    & a {
-      color: #ffffff;
-    }
   }
   &__light {
+    color: $accent;
     background-color: #ffffff;
     &:hover {
       background-color: #ecebeb;
-    }
-    & a {
-      color: $accent;
     }
   }
 }
