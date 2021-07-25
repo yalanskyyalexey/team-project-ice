@@ -6,7 +6,9 @@
     padding-left: 50px;
     padding-right: 50px;
   }
-  
+  @media screen and (min-width: 768px) {
+    padding-bottom: 79px;
+  }
 }
 
 
@@ -150,4 +152,51 @@
     margin-bottom: 30px;
     margin-top: 30px;
   }
+}
+
+.btn-container {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.contact-btn {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+  @media screen and (min-width: 768px) {
+    margin: 0;
+  }
+  
+  &.btn__accent {
+    color: $main-bg-color;
+    margin-bottom: 10px;
+    padding-left: 17px;
+    padding-right: 17px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: unset;
+      margin-right: 15px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+  &.btn__light {
+    color: $accent;
+    padding-left: 32px;
+    padding-right: 32px;
+    @media screen and (min-width: 768px) {
+      padding-left: 38px;
+      padding-right: 38px;
+    }
+    
+  }
+}
+
+.btn-img {
+  margin-left: 8px;
+  text-align: center;
 }
