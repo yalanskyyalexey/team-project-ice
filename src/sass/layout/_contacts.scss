@@ -1,14 +1,14 @@
 .contact {
   background-image: linear-gradient(
     to top,
-    #FFF5F6 92%,
-    #ffffff 8%
+    #FFF5F6 82%,
+    #ffffff 18%
   );
   padding-top: 43px;
   padding-bottom: 57px;
-  @media screen and (max-width: 480px){
-    padding-left: 50px;
-    padding-right: 50px;
+  @media screen and (min-width: 370px){
+    padding-left: 40px;
+    padding-right: 40px;
   }
   @media screen and (min-width: 768px) {
     padding-bottom: 79px;
@@ -27,7 +27,6 @@
     background-repeat: no-repeat;
     background-position: 100% 40%;
     background-size: contain;
-
   }
 }
 
@@ -40,9 +39,10 @@
     margin-bottom: 81px;
   }
   &__item {
-    max-width: 280px;
-    margin-left: auto;
-    margin-right: auto;
+    // max-width: 280px;
+    // margin-left: auto;
+    // margin-right: auto;
+    margin: 20px;
     padding: 43px 20px;
     background: $main-bg-color;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
@@ -57,6 +57,7 @@
     @media screen and (min-width: 768px){
       padding: 50px 32px;
       width: 100%;
+      margin:unset;
       margin-left: unset;
       margin-right: unset;
     }
