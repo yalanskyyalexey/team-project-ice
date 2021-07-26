@@ -35,7 +35,7 @@
           <br />
           Aliquam erat volutpat. Aenean accumsan.
         </p>
-        <button type="button" class="btn btn__light about__btn">
+        <button type="button" class="btn btn__light about__btn" about-modal-open>
           Read more
           <!-- Read more -->
           <svg width="5px" height="8px" class="about-description__btn-icon">
@@ -45,17 +45,26 @@
       </div>
     </div>
   </div>
-  <div class="about-backdrop">
+  <div class="about-backdrop is-hidden" about-data-menu>
     <div class="about-modal">
-      <button type="button" class="about-modal__btn">
+      <button type="button" class="about-modal__btn" about-modal-close>
         <svg class="about-modal-close" width="20" height="20">
           <use href="./images/sprite.svg#icon-menu-close"></use>
         </svg>
       </button>
       <div class="about-madal__text">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et
+        <div class="about-picture">
+          <picture>
+            <img
+              class="about-description__image"
+              src="./images/about/about-modal-img-min.jpg"
+              alt="Cow and milk"
+            />
+          </picture>
+        </div>
+        <p class="about-modal__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, assumenda velit facilis
+          neque adipisci quis animi porro pariatur obcaecati quisquam?
         </p>
       </div>
     </div>
