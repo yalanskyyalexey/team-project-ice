@@ -1,6 +1,15 @@
+.gallery-section{
+    background-image: linear-gradient(
+        to bottom,
+    #FFF5F6 35%,
+    $main-bg-color 65%,
+    );
+}
+
 .gallery {
     display: flex;
     align-items: center;
+    margin-bottom: 123px;
 }
 
 .gallery .gallery-list__variate {
@@ -23,5 +32,12 @@
     &__main {
         height: 270px;
         width: 270px;
+    }
+    transform: scale(1, 1);
+    &:hover {
+        position: relative;
+        z-index: 2;
+        transform: scale(1.4);
+        transition: img 250ms $effect;
     }
 }
