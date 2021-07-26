@@ -1,50 +1,51 @@
 .products {
   text-align: center;
-  margin-top: 151px;
+  margin-top: 91px;
 }
-
 .products__text {
-  font-family: Titan One;
-  font-style: 400;
-  font-weight: 400;
+  font-family: $second-font;
   font-size: 18px;
   line-height: 1.17;
   text-transform: uppercase;
-  color: #ffa5ba;
+  color: $section-text-color;
   margin-bottom: 15px;
 }
 .products__title {
-  font-family: Titan One;
-  font-style: normal;
-  font-weight: normal;
+  font-family: $second-font;
   font-size: 34px;
   line-height: 1.15;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #d41443;
 }
+
+.products__list {
+  position: relative;
+}
+.products__picture {
+  position: absolute;
+  overflow: hidden;
+  top: -110px;
+  margin-left: 15px;
+  margin-right: 16px;
+}
 .products__list:not(:last-child) {
-  margin-bottom: 17px;
+  margin-bottom: 151px;
 }
 .products__menu {
-  position: relative;
-  overflow: hidden;
   margin-bottom: 98px;
+  width: 280px;
+  margin-top: 151px;
 }
 .products__img {
   margin-right: auto;
   margin-left: auto;
-  top: 120px;
-}
-.products__menu > .products__picture {
-  position: absolute;
-  bottom: 120px;
 }
 .products__listtitle {
   padding-top: 161px;
 }
 .produkts__cart {
-  background: #ffb8ca;
+  background: $second-bg-color;
   border-radius: 24px;
   padding-bottom: 40px;
 }
@@ -57,14 +58,14 @@
   border-radius: 24px;
 }
 .products__listtitle {
-  font-family: Titan One;
+  font-family: $second-font;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
   line-height: 1.15;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: $main-bg-color;
 }
 .round-svg {
   text-align: center;
@@ -80,14 +81,19 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
+}
+.products__button {
   border-radius: 50%;
-  background: #ffffff;
+  background-color: $main-bg-color;
+  fill: #d41443;
   width: 40px;
   height: 40px;
-}
-.products__swg {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  margin-left: 15px;
-  margin-right: 15px;
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: #d41443;
+    fill: $main-bg-color;
+  }
 }
