@@ -4,8 +4,9 @@
 }
 
 .gallery .gallery-list__variate {
-    align-items: flex-start;
+    align-self: flex-start;
     margin-left: 5px;
+    margin-top: 20px;
 }
 
 .gallery-list {
