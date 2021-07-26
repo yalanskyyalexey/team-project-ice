@@ -1,17 +1,13 @@
-.gallery-section {
-    position: relative;
-    padding-bottom: 80px;
-    @media screen and (min-width: 768px) {
-        padding-bottom: 121px;
-    }
-    @media screen and (min-width: 1200px) {
-        padding-bottom: 123px;
-    }
-    &__picture {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, - 50%);
-        width: 100%;
+.gallery {
+    display: flex;
+    
+    align-items: center;
+}
+
+.gallery-list {
+    flex-direction: column;
+    margin-left: 5px;
+    &__icon {
+    margin-bottom: 15px;
     }
 }
