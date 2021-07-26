@@ -39,38 +39,6 @@
         }
     }
 
-    // &::before{
-    //     display: block;
-    //     content: "";
-    //     background-repeat: no-repeat;
-    //     background-position: center;
-    //     background-size: contain;
-    //     margin-bottom: 16px;
-    //     }
-    // &:nth-child(1)::before {
-    //     background-image: url(../images/about/icon1.png);
-    //     background-size: 50px 50px;
-    //     @media screen and (min-width: 768px) {
-    //         background-size: 33px 50px;
-    //     }
-    // }
-    
-    // &:nth-child(2)::before {
-    //     background-image: url(../images/about/icon2.png);
-    //     background-size: 50px 50px;
-    //     @media screen and (min-width: 768px) {
-    //         background-size: 33px 50px;
-    //     }
-    // }
-    
-    // &:nth-child(3)::before {
-    //     background-image: url(../images/about/icon3.png);
-    //     background-size: 50px 50px;
-    //     @media screen and (min-width: 768px) {
-    //         background-size: 33px 50px;
-    //     }
-    // }
-
     &__title {
         font-family: $second-font;
         font-weight: 400;
