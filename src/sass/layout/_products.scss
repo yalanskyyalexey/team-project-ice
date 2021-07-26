@@ -1,48 +1,140 @@
 .products {
   text-align: center;
   margin-top: 91px;
-}
-.products__text {
-  font-family: $second-font;
-  font-size: 18px;
-  line-height: 1.17;
-  text-transform: uppercase;
-  color: $section-text-color;
-  margin-bottom: 15px;
-}
-.products__title {
-  font-family: $second-font;
-  font-size: 34px;
-  line-height: 1.15;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #d41443;
-}
-
-.products__list {
-  position: relative;
-}
-.products__picture {
-  position: absolute;
-  overflow: hidden;
-  top: -110px;
-  margin-left: 15px;
-  margin-right: 16px;
-}
-.products__list:not(:last-child) {
-  margin-bottom: 151px;
-}
-.products__menu {
   margin-bottom: 98px;
-  width: 280px;
-  margin-top: 151px;
-}
-.products__img {
-  margin-right: auto;
-  margin-left: auto;
-}
-.products__listtitle {
-  padding-top: 161px;
+  @media screen and (min-width: 480px) {
+    width: 100%;
+  }
+  @media screen and (min-width: 768px) {
+    margin-top: 122px;
+    margin-bottom: 112px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-top: 127px;
+    margin-bottom: 119px;
+  }
+  &__text {
+    font-family: $second-font;
+    font-size: 18px;
+    line-height: 1.17;
+    text-transform: uppercase;
+    color: $section-text-color;
+    margin-bottom: 15px;
+    @media screen and (min-width: 768px) {
+      font-size: 26px;
+      line-height: 30px;
+      text-transform: uppercase;
+      color: $section-text-color;
+    }
+    @media screen and (min-width: 1280px) {
+      font-size: 30px;
+      line-height: 34px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: $section-text-color;
+    }
+  }
+  &__title {
+    font-family: $second-font;
+    font-size: 34px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $accent;
+    @media screen and (min-width: 768px) {
+      font-size: 48px;
+      line-height: 1.14;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: $accent;
+    }
+    @media screen and (min-width: 1280px) {
+      font-size: 58px;
+      line-height: 1.14;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: $accent;
+      margin-bottom: 234px;
+    }
+  }
+  &__menu {
+    margin-top: 151px;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -35px;
+      margin-bottom: -151px;
+      @media screen and (min-width: 1280px) {
+        margin-right: -40px;
+      }
+    }
+  }
+  &__list {
+    margin-bottom: 151px;
+    position: relative;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (min-width: 768px) {
+      max-width: 220px;
+      margin-right: 20px;
+      flex-basis: calc((100% - 80px) / 3);
+    }
+    @media screen and (min-width: 1280px) {
+      max-width: 335px;
+      margin-right: 25px;
+      flex-basis: calc((100% - 100px) / 3);
+    }
+  }
+  &__picture {
+    position: absolute;
+    overflow: hidden;
+    top: -110px;
+    margin-left: 15px;
+    margin-right: 16px;
+    @media screen and (min-width: 1280px) {
+      top: -185px;
+    }
+  }
+  &__img {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &__listtitle {
+    font-family: $second-font;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $main-bg-color;
+    padding-top: 161px;
+  }
+  &__listtext {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  &__arrowright {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+  }
+  &__button {
+    border-radius: 50%;
+    background-color: $main-bg-color;
+    fill: $accent;
+    width: 40px;
+    height: 40px;
+    border: none;
+    transition: background-color 250ms $effect;
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      background-color: $accent;
+      fill: $main-bg-color;
+    }
+  }
 }
 .produkts__cart {
   background: $second-bg-color;
@@ -57,43 +149,8 @@
   background: #c2e297;
   border-radius: 24px;
 }
-.products__listtitle {
-  font-family: $second-font;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 1.15;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: $main-bg-color;
-}
 .round-svg {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 30px;
-}
-.products__listtext {
-  padding-left: 40px;
-  padding-right: 40px;
-}
-
-.products__arrowright {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
-}
-.products__button {
-  border-radius: 50%;
-  background-color: $main-bg-color;
-  fill: #d41443;
-  width: 40px;
-  height: 40px;
-  border: none;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover,
-  &:focus {
-    cursor: pointer;
-    background-color: #d41443;
-    fill: $main-bg-color;
-  }
 }
