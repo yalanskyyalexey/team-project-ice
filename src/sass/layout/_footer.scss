@@ -91,6 +91,7 @@
   }
   &__icon {
     fill: #FEA5BB;
+    transition: fill 250ms $effect;
     @media screen and (min-width: 768px){
       width: 34px;
       height: 34px;
