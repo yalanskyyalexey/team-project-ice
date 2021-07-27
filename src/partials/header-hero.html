@@ -34,7 +34,7 @@
       </a>
       <button class="nav__btn" type="button" data-menu-open>
         <svg class="nav__icon-open">
-          <use href="./images/sprite.svg#icon-burger"></use>
+          <use href="./images/sprite.svg#icon-menu"></use>
         </svg>
       </button>
 
@@ -47,17 +47,17 @@
 
       <div class="nav__box" data-menu>
         <button class="nav__btn" type="button" data-menu-close>
-          <svg class="nav__icon-close" width="14" height="14">
-            <use href="./images/sprite.svg#icon-close" width="14" height="14"></use>
+          <svg class="nav__icon-close">
+            <use href="./images/sprite.svg#icon-cross"></use>
           </svg>
         </button>
 
         <ul class="nav__list">
-          <li class="nav__item"><a class="nav__link" href="#home">Home</a></li>
-          <li class="nav__item"><a class="nav__link" href="#about">About us</a></li>
-          <li class="nav__item"><a class="nav__link" href="">How it's made?</a></li>
-          <li class="nav__item"><a class="nav__link" href="">Our products</a></li>
-          <li class="nav__item"><a class="nav__link" href="">Contact</a></li>
+          <li class="nav__item"><a class="nav__link current" href="#home">Home</a></li>
+          <li class="nav__item"><a class="nav__link" href="#advantages">About us</a></li>
+          <li class="nav__item"><a class="nav__link" href="#about">How it's made?</a></li>
+          <li class="nav__item"><a class="nav__link" href="#products">Our products</a></li>
+          <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
         </ul>
         <button class="btn header__btn btn__light" type="button">
           Buy now
@@ -72,11 +72,11 @@
 <!--   hero -->
 <section class="hero">
   <div class="container">
-    <div class="hero__left">
+    <div class="hero__left animate__animated animate__bounceInLeft">
       <h1 class="hero__title">ice cream made with<span>passion</span></h1>
       <div class="hero__btns">
-        <a href="" class="hero__btn btn__accent"> Products</a>
-        <a href="" class="hero__btn btn__light">How it's made?</a>
+        <a href="#products" class="hero__btn btn__accent">Products</a>
+        <a href="#about" class="hero__btn btn__light">How it's made?</a>
       </div>
       <div class="hero__left-bottom">
         <picture class="hero__picture--milk">
@@ -186,7 +186,7 @@
           <div class="hero__circle"></div>
         </div>
       </div>
-      <picture class="hero__picture--girl">
+      <picture class="hero__picture--girl animate__animated animate__bounceInRight">
         <source
           srcset="
             ./images/hero-header/girl-desktop.png    1x,
