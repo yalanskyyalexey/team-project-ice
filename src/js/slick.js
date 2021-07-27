@@ -16,7 +16,7 @@ $('.review__slider-track').slick({
   dotsClass: "customer-reviews-dots"
   
  });
-=======
+
 $('.contact-list').slick({
   autoplay: true,
   speed: 1500,
