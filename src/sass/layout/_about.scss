@@ -40,6 +40,10 @@
       line-height: 1.15;
       margin-bottom: 16px;
     }
+    &:hover,
+    &:focus {
+      transform: scale(1.4);
+    }
   }
   &__title {
     font-family: $second-font;
@@ -59,6 +63,10 @@
       line-height: 1.14;
       letter-spacing: 0.06em;
       margin-bottom: 102px;
+    }
+    &:hover,
+    &:focus {
+      transform: scale(1.4);
     }
   }
   &-description {
@@ -136,10 +144,9 @@
 // about-backdrop and modal
 
 .about-backdrop {
- // display: none;
+  position: fixed;
   top: 0;
   left: 0;
-  position: fixed;
   width: 100%;
   height: 100%;
   background-color: rgba(255, 163, 185, 0.5);
@@ -147,12 +154,11 @@
 
 .about-modal {
   position: absolute;
-  width: 300px;
-  height: 400px;
-  max-height: 100vh;
+  min-width: 300px;
+  height: 660px;
   left: 50%;
   top: 50%;
-  box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 1px rgb(0 0 0 / 14%), 0 2px 1px rgb(0 0 0 / 20%);
+  box-shadow: 0px 8px 30px rgb(212 20 67 / 10%);
   padding-top: 10px;
   padding-bottom: 20px;
   padding-left: 30px;
@@ -168,30 +174,37 @@
     font-weight: 500;
     line-height: 1.8;
     margin-top: 30px;
+    margin-bottom: 20px;
     color: #ffffff;
+  }
+
+  @media screen and (min-width: 480px) {
+    width: 400px;
+    height: 540px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 528px;
   }
 }
 
 .is-hidd {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
   transform: scale(0.1);
   transition: transform 250ms $effect, opacity 250ms $effect, visibility 250ms $effect;
 }
 
 .about-modal__btn {
-  width: 40px;
-  height: 40px;
-  border: 2px solid #efefef;
   position: absolute;
+  width: 36px;
+  height: 36px;
+  border: 2px solid #efefef;
   top: 10px;
   right: 10px;
   border-radius: 50%;
   background-color: transparent;
   cursor: pointer;
-}
-
-.about-modal-close {
-  fill: #ffffff;
-
   &:hover,
   &:focus {
     border-color: tomato;
