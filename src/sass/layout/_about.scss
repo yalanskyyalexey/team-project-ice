@@ -133,77 +133,41 @@
 // about-backdrop and modal
 
 .about-backdrop {
+  display: none;
+  width: 100%;
+  height: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(235, 174, 188, 0.4);
-}
-
-.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-  transition: opacity 250ms $effect, transform 250ms $effect, visibility 250ms $effect;
+  background-color: rgba(255, 163, 185, 0.5);
 }
 
 .about-modal {
-  width: 350px;
-  height: 450px;
-  max-height: 100vh;
-  left: 50%;
-  top: 50%;
-  // background-color: #fff;
+  width: 400px;
+  height: 500px;
+  background-color: #fff;
   border-radius: 10px;
   position: absolute;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
   padding: 40px;
+  left: 50%;
+  top: 50%;
   background-color: $second-bg-color;
   transform: translate(-50%, -50%);
-  transition: transform 250ms $effect;
-}
-
-.about-modal__text {
-  margin-top: 30px;
-}
-
-.is-hidden {
-  transform: scale(0.1);
-  transition: transform 250ms $effect, opacity 250ms $effect, visibility 250ms $effect;
 }
 
 .about-modal__btn {
-  width: 36px;
-  height: 36px;
-  border: 2px solid #ffffff;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #efefef;
   position: absolute;
-  top: 12px;
+  top: 10px;
   right: 10px;
   border-radius: 50%;
   background-color: transparent;
   cursor: pointer;
-}
-.about-modal__btn:hover {
-  border-color: tomato;
-  transition: border-color 250ms $effect;
+  text-align: center;
 }
 
 .about-modal-close {
   fill: #ffffff;
-  transition: fill 250ms $effect;
-}
-
-.about-modal-close:hover {
-  fill: tomato;
-  transition: fill 250ms $effect;
-}
-
-.about-picture {
-  width: 200px;
-  height: 200px;
-  border: 2px solid #ffffff;
-  border-radius: 10px;
-  overflow: hidden;
-  margin: 0 auto;
 }
