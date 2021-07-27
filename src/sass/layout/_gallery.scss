@@ -1,15 +1,26 @@
+.gallery-section{
+    background-image: linear-gradient(
+        to bottom,
+    #FFF5F6 35%,
+    $main-bg-color 65%,
+    );
+}
+
 .gallery {
     display: flex;
-    
     align-items: center;
+    margin-bottom: 123px;
+}
+
+.gallery .gallery-list__variate {
+    align-self: flex-start;
+    margin-left: 5px;
+    margin-top: 20px;
 }
 
 .gallery-list {
     flex-direction: column;
     margin-left: 5px;
-    &__icon {
-    margin-bottom: 15px;
-
 }
 
 .gallery-icon {
@@ -58,7 +69,6 @@
         z-index: 2;
         transform: scale(1.4);
         transition: transform 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
-
     }
 }
-}
+
