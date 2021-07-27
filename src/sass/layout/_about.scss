@@ -121,6 +121,9 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 1.31;
+    &:focus {
+      outline-color: #ffb8ca;
+    }
   }
 }
 
@@ -133,22 +136,17 @@
 // about-backdrop and modal
 
 .about-backdrop {
+  display: none;
+  width: 100%;
+  height: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(235, 174, 188, 0.4);
-}
-
-.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-  transition: opacity 250ms $effect, transform 250ms $effect, visibility 250ms $effect;
+  background-color: rgba(255, 163, 185, 0.5);
 }
 
 .about-modal {
+
   width: 300px;
   height: 400px;
   max-height: 100vh;
@@ -169,7 +167,7 @@
   &__text {
     font-size: 12px;
     font-weight: 500;
-    line-height: 1.62;
+    line-height: 1.8;
     margin-top: 30px;
     color: #ffffff;
   }
@@ -181,33 +179,42 @@
 }
 
 .about-modal__btn {
-  width: 36px;
-  height: 36px;
-  border: 2px solid #ffffff;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #efefef;
   position: absolute;
-  top: 12px;
+  top: 10px;
   right: 10px;
   border-radius: 50%;
   background-color: transparent;
   cursor: pointer;
-  &:hover {
+
+}
+
+.about-modal-close {
+  fill: #ffffff;
+
+  &:hover,
+  &:focus {
     border-color: tomato;
     transition: border-color 250ms $effect;
   }
 }
 
-.about-modal-close {
+.about-modal__btn:hover .modal-close__icon,
+.about-modal__btn:focus .modal-close__icon {
+  fill: tomato;
+  transition: fill 250ms $effect;
+}
+
+.modal-close__icon {
   display: flex;
   fill: #ffffff;
-  transition: fill 250ms $effect;
-  &:hover {
-    fill: tomato;
-    transition: fill 250ms $effect;
-  }
 }
 
 .about-picture {
   width: 200px;
   height: 200px;
   margin: 0 auto;
+
 }
