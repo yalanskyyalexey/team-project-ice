@@ -136,7 +136,7 @@
 // about-backdrop and modal
 
 .about-backdrop {
-  display: none;
+  // display: none;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -146,7 +146,6 @@
 }
 
 .about-modal {
-
   width: 300px;
   height: 400px;
   max-height: 100vh;
@@ -154,7 +153,7 @@
   top: 50%;
   border-radius: 4px;
   position: absolute;
-  // box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 1px rgb(0 0 0 / 14%), 0 2px 1px rgb(0 0 0 / 20%);
   padding-top: 10px;
   padding-bottom: 20px;
   padding-left: 30px;
@@ -188,7 +187,6 @@
   border-radius: 50%;
   background-color: transparent;
   cursor: pointer;
-
 }
 
 .about-modal-close {
@@ -216,5 +214,4 @@
   width: 200px;
   height: 200px;
   margin: 0 auto;
-
 }
