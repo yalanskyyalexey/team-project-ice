@@ -568,11 +568,11 @@
 .backdrop.is-hidden {
   pointer-events: none;
   opacity: 0;
-  // transition: opacity $animationTime $timingFunction;
+  transition: opacity 250ms $effect;
 }
 .backdrop.is-hidden .modal {
   transform: scale(0);
-  // transition: transform $animationTime $timingFunction;
+  transition: transform 250ms $effect;
 }
 .backdrop {
   width: 100%;
@@ -581,21 +581,28 @@
   top: 0;
   left: 0;
   z-index: 100;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  background-color: rgba(0, 0, 0, 0.1);
 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .backdrop .modal {
-  padding: 40px;
   position: relative;
-
-  background-color: #ffffff;
+  padding: 180px 30px 30px;
+  position: relative;
+  background-image: url(../images/hero-header/modal-bg.png),
+    linear-gradient(to right, rgba(255, 184, 202, 0.452), rgba(255, 184, 202, 0.452)),
+    linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  background-repeat: no-repeat;
+  background-size: contain;
 
   font-weight: normal;
   font-size: 12px;
@@ -603,23 +610,38 @@
   letter-spacing: 0.01em;
 
   transform: scale(1);
-  // transition: transform $animationTime $timingFunction;
-  @media screen and (max-width: 1199px) {
-    max-width: 450px;
+  transition: transform 250ms $effect;
+  @media screen and (max-width: 1279px) {
+    max-width: 400px;
   }
-  @media screen and (min-width: 1200px) {
-    width: 528px;
+  @media screen and (min-width: 1280px) {
+    width: 450px;
   }
 }
 .modal__title {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 12px;
+  background-color: rgba(255, 255, 255, 0.438);
+  color: #000000;
 
+  margin-bottom: 30px;
   // color: $titleColor;
+  & span {
+    color: $accent;
+  }
 }
 .modal__btn_close {
   display: flex;
@@ -632,18 +654,24 @@
   top: 8px;
 
   cursor: pointer;
-  background-color: transparent;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border: none;
   border-radius: 50%;
+  &:hover {
+    background-color: $accent;
+  }
 }
 
 .modal__btn_icon {
-  fill: #000000;
+  width: 100%;
+  height: 100%;
 
-  // transition: fill $animationTime $timingFunction, transform $animationTime $timingFunction;
+  fill: $accent;
+
+  transition: fill 25ms $effect, transform 250ms $effect;
 
   .modal__btn_close:hover & {
-    // fill: $brandColor;
+    fill: #ffffff;
     transform: rotate(0.25turn);
   }
 }
@@ -651,125 +679,38 @@
 .modal-form {
   width: 100%;
   &__field {
-    &:nth-child(-n + 3) {
-      margin-bottom: 10px;
-    }
-  }
-  &__field {
-    &:nth-child(4) {
-      margin-bottom: 20px;
-    }
-  }
-  &__field {
-    &:nth-child(5) {
-      margin-bottom: 30px;
-    }
+    margin-bottom: 10px;
   }
   &__label {
     display: block;
+    text-align: center;
     margin-bottom: 4px;
+
+    color: #000000;
+    font-size: 12px;
   }
   &__input-wrapper {
     position: relative;
   }
-  &__icon {
-    width: 18px;
-    height: 18px;
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-
-    fill: #000000;
-    // transition: fill $animationTime $timingFunction;
-
-    .modal-form__input:focus ~ & {
-      // fill: $brandColor;
-    }
-  }
   &__input {
     width: 100%;
-    padding: 12px 12px 12px 42px;
+    padding: 12px 20px 12px 20px;
+    background-color: rgba(255, 255, 255, 0.192);
     /* margin-bottom: 10px; */
 
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
+    border: 1px solid rgba(212, 20, 68, 0.3);
+    border-radius: 22px;
     outline: none;
 
-    // transition: border-color $animationTime $timingFunction;
+    transition: border-color 250ms $effect;
     &:focus {
-      // border-color: $brandColor;
+      border-color: $accent;
     }
-  }
-}
-
-.text-area-comment {
-  width: 100%;
-  height: 120px;
-  resize: none;
-  padding: 12px 16px;
-
-  // transition: border-color $animationTime $timingFunction;
-  &:focus {
-    // border-color: $brandColor;
-  }
-  &::placeholder {
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.01em;
-
-    color: rgba(117, 117, 117, 0.5);
-  }
-}
-.checkbox__label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  letter-spacing: 0.03em;
-
-  @media screen and (max-width: 1199px) {
-    font-size: 12px;
-    line-height: 1.17;
-  }
-  @media screen and (min-width: 1200px) {
-    font-size: 14px;
-    line-height: 1.71;
-  }
-}
-.checkbox__label .checkbox__icon-box {
-  width: 16px;
-  height: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 8px;
-
-  border: 2px solid #000000;
-  border-radius: 2px;
-}
-
-.checkbox__input:checked + .checkbox__label .checkbox__icon-box {
-  // background-color: $brandColor;
-  border: none;
-}
-
-.checkbox__icon {
-  fill: #ffffff;
-}
-
-.checkbox__link {
-  // color: $brandColor;
-  text-decoration: underline;
-
-  // transition: color $animationTime $timingFunction;
-
-  &:hover {
-    // color: $btnHover;
   }
 }
 
 .modal-form__btn {
+  margin-top: 40px;
   display: block;
   margin-right: auto;
   margin-left: auto;

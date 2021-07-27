@@ -38,7 +38,7 @@
         </svg>
       </button>
 
-      <button class="btn header__btn--mob btn__light" type="button">
+      <button class="btn header__btn--mob btn__light" type="button" header-modal-open>
         Buy now
         <svg class="btn__arrow">
           <use href="./images/sprite.svg#icon-vector-btn-pink" width="5" height="8"></use>
@@ -59,7 +59,7 @@
           <li class="nav__item"><a class="nav__link" href="#products">Our products</a></li>
           <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
         </ul>
-        <button class="btn header__btn btn__light" type="button" header-modal-open>
+        <button class="btn header__btn btn__light" type="button" header-modal-open-second>
           Buy now
           <svg class="btn__arrow">
             <use href="./images/sprite.svg#icon-vector-btn-pink" width="5" height="8"></use>
@@ -220,40 +220,21 @@
 <div class="backdrop backdrop_color is-hidden" header-data-modal>
   <div class="modal">
     <button class="modal__btn_close" header-modal-close>
-      <svg class="modal__btn_icon" width="18" height="18">
+      <svg class="modal__btn_icon">
         <use href="./images/sprite.svg#icon-cross"></use>
       </svg>
     </button>
-    <p class="modal__title">To order a delicious ice cream, leave us your details</p>
+    <p class="modal__title">To order a <span>delicious ice cream</span>, leave us your details</p>
     <form class="modal-form">
       <div class="modal-form__field">
-        <label class="modal-form__label" for="name">Имя</label>
-        <div class="modal-form__input-wrapper">
-          <input class="modal-form__input" type="text" name="name" id="name" />
-          <!-- <svg class="modal-form__icon">
-            <use href="./images/icons.svg#icon-modal-person"></use>
-          </svg> -->
-        </div>
+        <label class="modal-form__label" for="name">Your name</label>
+        <input class="modal-form__input" type="text" name="name" id="name" />
       </div>
       <div class="modal-form__field">
-        <label class="modal-form__label" for="tel">Телефон</label>
-        <div class="modal-form__input-wrapper">
-          <input class="modal-form__input" type="tel" name="tel" id="tel" />
-          <!-- <svg class="modal-form__icon">
-            <use href="./images/icons.svg#icon-modal-phone"></use>
-          </svg> -->
-        </div>
+        <label class="modal-form__label" for="tel">Phone</label>
+        <input class="modal-form__input" type="tel" name="tel" id="tel" />
       </div>
-      <div class="modal-form__field checkbox">
-        <input
-          class="checkbox__input visually-hidden"
-          type="checkbox"
-          name="conditions"
-          id="conditions"
-          required
-        />
-      </div>
-      <button class="modal-form__btn btn" type="submit">Отправить</button>
+      <button class="modal-form__btn btn btn__accent" type="submit">I want ice cream</button>
     </form>
   </div>
 </div>
