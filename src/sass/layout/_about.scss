@@ -121,6 +121,9 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 1.31;
+    &:focus {
+      outline-color: #ffb8ca;
+    }
   }
 }
 
@@ -169,7 +172,7 @@
   &__text {
     font-size: 12px;
     font-weight: 500;
-    line-height: 1.62;
+    line-height: 1.8;
     margin-top: 30px;
     color: #ffffff;
   }
@@ -190,20 +193,22 @@
   border-radius: 50%;
   background-color: transparent;
   cursor: pointer;
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: tomato;
     transition: border-color 250ms $effect;
   }
 }
 
-.about-modal-close {
+.about-modal__btn:hover .modal-close__icon,
+.about-modal__btn:focus .modal-close__icon {
+  fill: tomato;
+  transition: fill 250ms $effect;
+}
+
+.modal-close__icon {
   display: flex;
   fill: #ffffff;
-  transition: fill 250ms $effect;
-  &:hover {
-    fill: tomato;
-    transition: fill 250ms $effect;
-  }
 }
 
 .about-picture {
