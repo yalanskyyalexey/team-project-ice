@@ -1,57 +1,242 @@
 .section__customer-reviews {
   padding-top: 40px;
   padding-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 .review__slider-track {
-  display: flex;
+  /*   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  /*   overflow-x: hidden; */
   text-align: center;
+  margin: 0 -15px;
+  /* margin-left: -15px; */
+  /* margin: 0 -10px; */
 }
 .review__slider-item {
+  /*   min-width: 0; */
+  margin: 0 15px;
+  /*   margin-left: 15px; */
+  // text-align: center;
 }
 .review__thumb {
   margin: 0 auto;
   width: 85px;
   height: 85px;
   margin-bottom: 29px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 19px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 15px;
+  }
 }
 .review__text-container {
-  min-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 250px;
 
-  background: #fafafa;
+  /* height: 308px; */
+  background: #fafafa url('../images/customer-reviews/1.png');
+  background-position: 61px 28px;
+  background-repeat: no-repeat;
+  background-size: auto auto, 54px 40px;
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 43px;
   padding-bottom: 20px;
   margin-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    background-position: 40px 30px;
+    padding-left: 60px;
+    padding-right: 36px;
+    padding-top: 47px;
+    padding-bottom: 32px;
+    width: 620px;
+    margin-bottom: 24px;
+  }
+  @media screen and (min-width: 1280px) {
+    background-position: 50px 32px;
+    padding-left: 59px;
+    padding-right: 54px;
+
+    width: 926px;
+    margin-bottom: 15px;
+  }
 }
 .review__text {
   $lh: 2.5em;
   $font-size: 12px;
   font-size: $font-size;
+
+  padding: 0 15px;
+
+  font-weight: 500;
   line-height: $lh;
 
   /*  background: #fafafa; */
   background-image: repeating-linear-gradient(
     to bottom,
-    rgba(black, 0) 0,
-    rgba(black, 0) $lh/1em * $font-size - 1,
-    rgba(black, 0.1) $lh/1em * $font-size - 1,
-    rgba(black, 0.1) $lh/1em * $font-size
+    rgba($main-text-color, 0) 0,
+    rgba($main-text-color, 0) $lh/1em * $font-size - 1,
+    rgba($main-text-color, 0.1) $lh/1em * $font-size - 1,
+    rgba($main-text-color, 0.1) $lh/1em * $font-size
   );
+  @media screen and (min-width: 768px) {
+    $font-size: 14px;
+    font-size: $font-size;
+
+    background-image: repeating-linear-gradient(
+      to bottom,
+      rgba($main-text-color, 0) 0,
+      rgba($main-text-color, 0) $lh/1em * $font-size - 1,
+      rgba($main-text-color, 0.1) $lh/1em * $font-size - 1,
+      rgba($main-text-color, 0.1) $lh/1em * $font-size
+    );
+  }
+  @media screen and (min-width: 1280px) {
+    $font-size: 16px;
+    font-size: $font-size;
+
+    background-image: repeating-linear-gradient(
+      to bottom,
+      rgba($main-text-color, 0) 0,
+      rgba($main-text-color, 0) $lh/1em * $font-size - 1,
+      rgba($main-text-color, 0.1) $lh/1em * $font-size - 1,
+      rgba($main-text-color, 0.1) $lh/1em * $font-size
+    );
+    // background-image: repeating-linear-gradient(to top, #e1e1e1 0px 1px, transparent 1px 31px);
+  }
 }
 .review__author {
   display: block;
-  &::before {
-    margin: 0 auto;
-    display: block;
-    content: ' ';
-    border-radius: 80%;
-    /*     border: 1px solid black;
- */
-    width: 4px;
-    height: 4px;
-    background-color: black;
+  font-weight: 500;
+  line-height: 1.86;
+  /*   margin-bottom: 30px; */
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
   }
+  @media screen and (min-width: 1280px) {
+    font-size: 20px;
+  }
+}
+.review-dots {
+  line-height: 0;
+  margin-bottom: 15px;
+
+  /*   display: flex;
+  justify-content: center; */
+}
+.review-dots__item {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: $accent;
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+  // &::before {
+  //   display: block;
+  //   &:not(:last-child) {
+  //     /*      margin-right: 10px; */
+  //   }
+  //   margin: 0;
+  //   padding: 0;
+
+  //   content: ' ';
+
+  //   width: 4px;
+  //   height: 4px;
+  //   border-radius: 50%;
+  //   background-color: $accent;
+  // }
+}
+
+//slider styles
+.section__customer-reviews {
+  .slick-dotted.slick-slider {
+    margin-bottom: 50px;
+  }
+}
+.customer-reviews-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -50px;
+  /*  display: block; */
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.customer-reviews-dots li {
+  position: relative;
+  /*   display: flex;
+  justify-content: center;
+  align-items: center; */
+  width: 20px;
+  height: 20px;
+  margin: 0 9px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.customer-reviews-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+.customer-reviews-dots li button:hover,
+.customer-reviews-dots li button:focus {
+  outline: none;
+}
+
+.customer-reviews-dots li button:hover:before,
+.customer-reviews-dots li button:focus:before {
+  opacity: 1;
+}
+
+.customer-reviews-dots li button:before {
+  font-family: 'slick';
+  /* font-size: 12px; */
+  line-height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 13px;
+  height: 12px;
+  content: url("data:image/svg+xml,%3Csvg width='13' height='12' viewBox='0 0 13 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='6.395' cy='6' r='6' fill='%23D9D9D9'/%3E%3C/svg%3E");
+  /*   background-color: #d9d9d9;
+  border-radius: 50%; */
+  text-align: center;
+  opacity: 0.8;
+  /*  color: $main-text-color; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* transition: opacity 250ms ease-in; */
+}
+
+.customer-reviews-dots li.slick-active button:before {
+  opacity: 1;
+
+  content: url("data:image/svg+xml,%3Csvg width='13' height='12' viewBox='0 0 13 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.2399 5.77539C12.4646 5.53163 12.4429 5.15801 12.1914 4.94111L6.65187 0.159738C6.40043 -0.0571627 5.99731 -0.052619 5.75117 0.169981L0.19278 5.19603C-0.053367 5.41863 -0.065448 5.79177 0.166032 6.02912L0.305389 6.17228C0.536586 6.40963 0.910291 6.43793 1.13955 6.2353L1.55495 5.86834V11.2407C1.55495 11.5703 1.82571 11.8372 2.15961 11.8372H4.32629C4.66019 11.8372 4.93095 11.5703 4.93095 11.2407V7.48221H7.69456V11.2407C7.68976 11.5701 7.92867 11.8369 8.26258 11.8369H10.5587C10.8926 11.8369 11.1634 11.5701 11.1634 11.2405V5.94398C11.1634 5.94398 11.2781 6.04315 11.4197 6.16587C11.561 6.28835 11.8577 6.19014 12.0824 5.94614L12.2399 5.77539Z' fill='%23D31342'/%3E%3C/svg%3E");
+  background-color: $main-bg-color;
 }
