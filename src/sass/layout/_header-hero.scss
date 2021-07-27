@@ -1,9 +1,82 @@
+// animation
+.hero__picture--icecream {
+  animation-duration: 1000ms;
+}
+
+.hero__picture--girl {
+  animation-duration: 1000ms;
+  animation-delay: 500ms;
+}
+.hero__left {
+  animation-duration: 1000ms;
+  animation-delay: 500ms;
+}
+
+// .hero__picture--girl.animate__tada {
+//   animation-delay: 2s;
+// }
+
+// BACK TO TOP!!!!!
+.back_to_top {
+  position: fixed;
+
+  // display: block;
+  opacity: 1;
+  transition: opacity 250ms $effect;
+  bottom: 40px;
+  right: 20px;
+  z-index: 9999;
+  width: 40px;
+  height: 40px;
+  line-height: 30px;
+  background-color: $second-bg-color;
+  color: #444;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  // display: none;
+  fill: #ffffff;
+
+  transform: rotate(-90deg);
+
+  @media screen and (min-width: 768px) {
+    bottom: 60px;
+    right: 30px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    bottom: 80px;
+    right: 40px;
+  }
+  &:hover,
+  &:focus {
+    background-color: $accent;
+  }
+}
+
+.back_to_top-hidden {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+
+  opacity: 0;
+
+  transition: opacity 250ms $effect;
+}
+
+// BACK TO TOP!!!!!
 .header,
 .hero {
   background-color: $second-bg-color;
 }
 .header .container {
-  max-width: 767px;
+  @media screen and (max-width: 767px) {
+    max-width: 767px;
+  }
 }
 
 .nav {
@@ -14,68 +87,116 @@
   @media screen and (min-width: 768px) {
     padding-top: 37px;
   }
+  &__logo {
+    flex-shrink: 0;
+    @media screen and (min-width: 1280px) {
+      position: relative;
+      left: -70px;
+    }
+  }
   &__btn {
     margin-left: auto;
     padding: 0;
     border: none;
     background-color: transparent;
     fill: $accent;
+    @media screen and (min-width: 1280px) {
+      display: none;
+    }
   }
   &__icon-open {
     position: relative;
     z-index: 2;
-    height: 12px;
-    width: 20px;
+    height: 35px;
+    width: 35px;
+
+    fill: $accent;
+
+    transition: fill 250ms $effect;
+
+    &:hover,
+    &:focus {
+      fill: #c7133e;
+    }
   }
   &__icon-close {
-    height: 14px;
-    width: 14px;
+    height: 25px;
+    width: 25px;
     position: absolute;
-    right: 28px;
-    top: 23px;
+    right: 18px;
+    top: 13px;
+
+    fill: #ffffff;
+
+    transition: fill 250ms $effect;
+    &:hover,
+    &:focus {
+      fill: $accent;
+    }
   }
   &__box {
-    z-index: 4;
-    position: fixed;
-    top: 0;
-    right: 0;
-    padding-top: 60px;
-    padding-left: 20px;
-    padding-right: 20px;
-
     display: flex;
-    flex-direction: column-reverse;
-    justify-content: flex-end;
+    z-index: 4;
+    @media screen and (max-width: 1279px) {
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding-top: 60px;
+      padding-left: 20px;
+      padding-right: 20px;
 
-    height: 100%;
-    width: 250px;
-    background-color: #e17992;
+      flex-direction: column-reverse;
+      justify-content: flex-end;
 
-    transform: translateX(100%);
-    &.is-open {
-      transform: translateX(0);
+      height: 100%;
+      width: 250px;
+      background-color: #e17992;
+
+      transform: translateX(100%);
+      transition: transform 300ms $effect;
+      &.is-open {
+        transform: translateX(0);
+      }
+    }
+    @media screen and (min-width: 1280px) {
+      align-items: center;
+      position: relative;
+      width: 100%;
+      margin-left: 40px;
+    }
+  }
+  &__list {
+    @media screen and (min-width: 1280px) {
+      display: flex;
     }
   }
   &__item {
-    position: relative;
-    &:nth-child(2n + 1) {
-      & .nav__link::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background-color: #e18298;
+    @media screen and (max-width: 1279px) {
+      position: relative;
+      &:nth-child(2n + 1) {
+        & .nav__link::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background-color: #e18298;
+        }
+        & .nav__link::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background-color: #e18298;
+        }
       }
-      & .nav__link::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background-color: #e18298;
+    }
+    @media screen and (min-width: 1280px) {
+      &:not(:last-child) {
+        margin-right: 35px;
       }
     }
   }
@@ -90,24 +211,33 @@
 
     color: #ffffff;
 
+    transition: color 250ms $effect;
+
     &.current {
       color: $accent;
     }
+    &:hover,
+    &:focus {
+      color: $accent;
+    }
+    @media screen and (min-width: 1280px) {
+      font-size: 16px;
+      line-height: 1.31;
+    }
   }
-}
-
-.nav__logo {
-}
-
-.nav__list {
 }
 
 .header__btn {
   font-size: 16px;
   line-height: 1.31;
   margin-bottom: 20px;
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 0;
+    margin-left: auto;
+  }
+
   &--mob {
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767px), (min-width: 1280px) {
       display: none;
     }
     @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -134,6 +264,10 @@
       position: relative;
     }
   }
+  @media screen and (min-width: 1280px) {
+    padding-top: 84px;
+    padding-bottom: 45px;
+  }
 
   &__title {
     display: flex;
@@ -155,6 +289,13 @@
       font-size: 22px;
       line-height: 1.36;
     }
+    @media screen and (min-width: 1280px) {
+      width: 280px;
+      margin-bottom: 25px;
+
+      font-size: 38px;
+      line-height: 1.15;
+    }
 
     & span {
       font-family: $second-font;
@@ -170,6 +311,9 @@
         font-size: 34px;
         line-height: 0.9;
       }
+      @media screen and (min-width: 1280px) {
+        font-size: 58px;
+      }
     }
   }
   &__btns {
@@ -177,6 +321,9 @@
 
     @media screen and (min-width: 768px) {
       margin-bottom: 19px;
+    }
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 56px;
     }
   }
   &__btn {
@@ -191,6 +338,17 @@
 
     font-size: 8px;
     line-height: 1.25;
+
+    transition: background-color 250ms $effect;
+    @media screen and (min-width: 1280px) {
+      padding-right: 21px;
+      padding-left: 21px;
+
+      height: 40px;
+      font-size: 14px;
+      line-height: 1.28;
+    }
+
     &.btn__accent {
       margin-right: 8px;
     }
@@ -206,6 +364,9 @@
       fill: $accent;
       width: 10px;
       height: 9px;
+      @media screen and (min-width: 1280px) {
+        transform: scale(1.4);
+      }
     }
     @media screen and (min-width: 768px) {
       display: flex;
@@ -217,6 +378,10 @@
     padding-bottom: 6px;
     position: relative;
     left: -4px;
+    @media screen and (min-width: 1280px) {
+      padding-bottom: 11px;
+      left: 30px;
+    }
   }
 
   &__text {
@@ -226,6 +391,13 @@
     font-size: 8px;
     line-height: 1.5;
     color: #ffffff;
+    @media screen and (min-width: 1280px) {
+      width: 200px;
+      margin-bottom: 20px;
+
+      font-size: 14px;
+      line-height: 1.4;
+    }
   }
 
   &__link-arrow {
@@ -237,6 +409,10 @@
     height: 18px;
     background-color: #ffffff;
     border-radius: 50%;
+    @media screen and (min-width: 1280px) {
+      width: 26px;
+      height: 26px;
+    }
   }
 
   &__right {
@@ -254,7 +430,11 @@
       right: 32px;
       @media screen and (min-width: 768px) {
         bottom: -28px;
-        right: 247px;
+        right: 227px;
+      }
+      @media screen and (min-width: 1280px) {
+        bottom: -45px;
+        right: 353px;
       }
     }
     &--ellipse {
@@ -264,20 +444,28 @@
       right: 0;
       @media screen and (min-width: 768px) {
         bottom: 18px;
-        right: 137px;
+        right: 117px;
+      }
+      @media screen and (min-width: 1280px) {
+        bottom: 30px;
+        right: 170px;
       }
     }
     &--girl {
       z-index: 2;
       position: absolute;
-      right: 34px;
+      right: 20px;
       bottom: -28px;
+      @media screen and (min-width: 1280px) {
+        bottom: -45px;
+        right: 0;
+      }
     }
   }
 
   &__branches {
     position: absolute;
-    right: 34px;
+    right: 20px;
     top: 0;
 
     font-family: $second-font;
@@ -286,6 +474,11 @@
     color: $accent;
     :not(:last-child) {
       margin-bottom: 10px;
+    }
+    @media screen and (min-width: 1280px) {
+      font-size: 46px;
+      right: 0;
+      top: -20px;
     }
   }
 
@@ -301,6 +494,11 @@
     position: relative;
     left: 6px;
     bottom: 3px;
+    @media screen and (min-width: 1280px) {
+      left: 12px;
+      bottom: 5px;
+    }
+
     &::after {
       content: 'cafes';
       position: absolute;
@@ -311,6 +509,11 @@
       font-weight: 400;
       font-size: 8px;
       color: #ffffff;
+      @media screen and (min-width: 1280px) {
+        bottom: -10px;
+
+        font-size: 14px;
+      }
     }
   }
   &__food-trucks {
@@ -318,6 +521,10 @@
     position: relative;
     left: 8px;
     bottom: 4px;
+    @media screen and (min-width: 1280px) {
+      left: 14px;
+      bottom: 6px;
+    }
 
     &::after {
       width: 50px;
@@ -330,6 +537,11 @@
       font-weight: 400;
       font-size: 8px;
       color: #ffffff;
+      @media screen and (min-width: 1280px) {
+        width: 80px;
+        bottom: -10px;
+        font-size: 14px;
+      }
     }
   }
   &__circle {
@@ -338,5 +550,9 @@
 
     border-radius: 50%;
     background-color: #ffffff;
+    @media screen and (min-width: 1280px) {
+      width: 30px;
+      height: 30px;
+    }
   }
 }

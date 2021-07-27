@@ -14,7 +14,7 @@
       background-image: url(../images/about/milkbg-mobile@2x.png);
     }
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1200px) {
     padding-top: 125px;
     background-image: url(../images/about/milkbg-desktop.png);
     background-position: 100% 100%;
@@ -54,7 +54,7 @@
       font-size: 48px;
       margin-bottom: 50px;
     }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
       font-size: 58px;
       line-height: 1.14;
       letter-spacing: 0.06em;
@@ -81,7 +81,7 @@
       padding-left: unset;
       padding-right: unset;
     }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
       margin-left: 74px;
     }
   }
@@ -94,7 +94,7 @@
       font-size: 14px;
       line-height: 1.76;
     }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
       font-size: 16px;
       letter-spacing: 0.04em;
       width: 463px;
@@ -112,7 +112,7 @@
       letter-spacing: 0.04em;
       margin-bottom: 56px;
     }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
       line-height: 1.94;
       width: 463px;
     }
@@ -128,4 +128,86 @@
   margin-left: 14px;
   width: 5px;
   height: 8px;
+}
+
+// about-backdrop and modal
+
+.about-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(235, 174, 188, 0.4);
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 250ms $effect, transform 250ms $effect, visibility 250ms $effect;
+}
+
+.about-modal {
+  width: 300px;
+  height: 400px;
+  max-height: 100vh;
+  left: 50%;
+  top: 50%;
+  border-radius: 4px;
+  position: absolute;
+  // box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: $second-bg-color;
+  transform: translate(-50%, -50%);
+  transition: transform 250ms $effect;
+  background: #f7c2c2;
+
+  &__text {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.62;
+    margin-top: 30px;
+    color: #ffffff;
+  }
+}
+
+.is-hidden {
+  transform: scale(0.1);
+  transition: transform 250ms $effect, opacity 250ms $effect, visibility 250ms $effect;
+}
+
+.about-modal__btn {
+  width: 36px;
+  height: 36px;
+  border: 2px solid #ffffff;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  &:hover {
+    border-color: tomato;
+    transition: border-color 250ms $effect;
+  }
+}
+
+.about-modal-close {
+  display: flex;
+  fill: #ffffff;
+  transition: fill 250ms $effect;
+  &:hover {
+    fill: tomato;
+    transition: fill 250ms $effect;
+  }
+}
+
+.about-picture {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
 }
