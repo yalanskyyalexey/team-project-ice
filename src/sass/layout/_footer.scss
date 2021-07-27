@@ -103,6 +103,8 @@
 }
 
 .footer-below {
+  display: flex;
+  align-items: center;
   background-color: #FFF5F6;
   padding-bottom: 25px;
   @media screen and (min-width: 768px){
@@ -114,6 +116,7 @@
 }
 .footer-copy {
   width: 150px;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
   font-style: normal;
@@ -131,4 +134,10 @@
       justify-content: space-between;
       align-items: baseline;
     }
+}
+
+
+
+.team-logo {
+  border-radius: 50%;
 }
