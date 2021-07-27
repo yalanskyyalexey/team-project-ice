@@ -1,22 +1,44 @@
+// animation
+.hero__picture--icecream {
+  animation-duration: 1000ms;
+}
+
+.hero__picture--girl {
+  animation-duration: 1000ms;
+  animation-delay: 500ms;
+}
+.hero__left {
+  animation-duration: 1000ms;
+  animation-delay: 500ms;
+}
+
+// .hero__picture--girl.animate__tada {
+//   animation-delay: 2s;
+// }
+
 // BACK TO TOP!!!!!
 .back_to_top {
   position: fixed;
+
+  // display: block;
+  opacity: 1;
+  transition: opacity 250ms $effect;
   bottom: 40px;
   right: 20px;
   z-index: 9999;
   width: 40px;
   height: 40px;
-  // text-align: center;
   line-height: 30px;
   background-color: $second-bg-color;
   color: #444;
   cursor: pointer;
   border: none;
   border-radius: 50%;
-  display: none;
+  // display: none;
   fill: #ffffff;
 
   transform: rotate(-90deg);
+
   @media screen and (min-width: 768px) {
     bottom: 60px;
     right: 30px;
@@ -32,9 +54,20 @@
   }
 }
 
-.back_to_top-show {
-  display: block;
+.back_to_top-hidden {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+
+  opacity: 0;
+
+  transition: opacity 250ms $effect;
 }
+
 // BACK TO TOP!!!!!
 .header,
 .hero {
@@ -74,15 +107,32 @@
   &__icon-open {
     position: relative;
     z-index: 2;
-    height: 12px;
-    width: 20px;
+    height: 35px;
+    width: 35px;
+
+    fill: $accent;
+
+    transition: fill 250ms $effect;
+
+    &:hover,
+    &:focus {
+      fill: #c7133e;
+    }
   }
   &__icon-close {
-    height: 14px;
-    width: 14px;
+    height: 25px;
+    width: 25px;
     position: absolute;
-    right: 28px;
-    top: 23px;
+    right: 18px;
+    top: 13px;
+
+    fill: #ffffff;
+
+    transition: fill 250ms $effect;
+    &:hover,
+    &:focus {
+      fill: $accent;
+    }
   }
   &__box {
     display: flex;
@@ -288,6 +338,8 @@
 
     font-size: 8px;
     line-height: 1.25;
+
+    transition: background-color 250ms $effect;
     @media screen and (min-width: 1280px) {
       padding-right: 21px;
       padding-left: 21px;
