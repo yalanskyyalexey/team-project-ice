@@ -1,22 +1,44 @@
+// animation
+.hero__picture--icecream {
+  animation-duration: 1000ms;
+}
+
+.hero__picture--girl {
+  animation-duration: 1000ms;
+  animation-delay: 500ms;
+}
+.hero__left {
+  animation-duration: 1000ms;
+  animation-delay: 500ms;
+}
+
+// .hero__picture--girl.animate__tada {
+//   animation-delay: 2s;
+// }
+
 // BACK TO TOP!!!!!
 .back_to_top {
   position: fixed;
+
+  // display: block;
+  opacity: 1;
+  transition: opacity 250ms $effect;
   bottom: 40px;
   right: 20px;
   z-index: 9999;
   width: 40px;
   height: 40px;
-  // text-align: center;
   line-height: 30px;
   background-color: $second-bg-color;
   color: #444;
   cursor: pointer;
   border: none;
   border-radius: 50%;
-  display: none;
+  // display: none;
   fill: #ffffff;
 
   transform: rotate(-90deg);
+
   @media screen and (min-width: 768px) {
     bottom: 60px;
     right: 30px;
@@ -32,9 +54,20 @@
   }
 }
 
-.back_to_top-show {
-  display: block;
+.back_to_top-hidden {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+
+  opacity: 0;
+
+  transition: opacity 250ms $effect;
 }
+
 // BACK TO TOP!!!!!
 .header,
 .hero {
@@ -74,15 +107,32 @@
   &__icon-open {
     position: relative;
     z-index: 2;
-    height: 12px;
-    width: 20px;
+    height: 35px;
+    width: 35px;
+
+    fill: $accent;
+
+    transition: fill 250ms $effect;
+
+    &:hover,
+    &:focus {
+      fill: #c7133e;
+    }
   }
   &__icon-close {
-    height: 14px;
-    width: 14px;
+    height: 25px;
+    width: 25px;
     position: absolute;
-    right: 28px;
-    top: 23px;
+    right: 18px;
+    top: 13px;
+
+    fill: #ffffff;
+
+    transition: fill 250ms $effect;
+    &:hover,
+    &:focus {
+      fill: $accent;
+    }
   }
   &__box {
     display: flex;
@@ -124,6 +174,13 @@
     @media screen and (max-width: 1279px) {
       position: relative;
       &:nth-child(2n + 1) {
+        // background-image: linear-gradient(
+        //   to top,
+        //   #e18298 0px 1px,
+        //   transparent 1px 43px,
+        //   #e18298 43px 44px
+        // );
+
         & .nav__link::before {
           content: '';
           position: absolute;
@@ -162,7 +219,6 @@
     color: #ffffff;
 
     transition: color 250ms $effect;
-
     &.current {
       color: $accent;
     }
@@ -191,7 +247,7 @@
       display: none;
     }
     @media screen and (min-width: 768px) and (max-width: 1279px) {
-      margin-left: 30px;
+      margin-left: 25px;
 
       position: relative;
       z-index: 3;
@@ -288,6 +344,8 @@
 
     font-size: 8px;
     line-height: 1.25;
+
+    transition: background-color 250ms $effect;
     @media screen and (min-width: 1280px) {
       padding-right: 21px;
       padding-left: 21px;
@@ -503,4 +561,157 @@
       height: 30px;
     }
   }
+}
+
+// modal
+
+.backdrop.is-hidden {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 250ms $effect;
+}
+.backdrop.is-hidden .modal {
+  transform: scale(0);
+  transition: transform 250ms $effect;
+}
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  background-color: rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.backdrop .modal {
+  position: relative;
+  padding: 180px 30px 30px;
+  position: relative;
+  background-image: url(../images/hero-header/modal-bg.png),
+    linear-gradient(to right, rgba(255, 184, 202, 0.452), rgba(255, 184, 202, 0.452)),
+    linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  transform: scale(1);
+  transition: transform 250ms $effect;
+  @media screen and (max-width: 1279px) {
+    max-width: 400px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 450px;
+  }
+}
+.modal__title {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+  background-color: rgba(255, 255, 255, 0.438);
+  color: #000000;
+
+  margin-bottom: 30px;
+  // color: $titleColor;
+  & span {
+    color: $accent;
+  }
+}
+.modal__btn_close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+
+  cursor: pointer;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  &:hover {
+    background-color: $accent;
+  }
+}
+
+.modal__btn_icon {
+  width: 100%;
+  height: 100%;
+
+  fill: $accent;
+
+  transition: fill 25ms $effect, transform 250ms $effect;
+
+  .modal__btn_close:hover & {
+    fill: #ffffff;
+    transform: rotate(0.25turn);
+  }
+}
+
+.modal-form {
+  width: 100%;
+  &__field {
+    margin-bottom: 10px;
+  }
+  &__label {
+    display: block;
+    text-align: center;
+    margin-bottom: 4px;
+
+    color: #000000;
+    font-size: 12px;
+  }
+  &__input-wrapper {
+    position: relative;
+  }
+  &__input {
+    width: 100%;
+    padding: 12px 20px 12px 20px;
+    background-color: rgba(255, 255, 255, 0.192);
+    /* margin-bottom: 10px; */
+
+    border: 1px solid rgba(212, 20, 68, 0.3);
+    border-radius: 22px;
+    outline: none;
+
+    transition: border-color 250ms $effect;
+    &:focus {
+      border-color: $accent;
+    }
+  }
+}
+
+.modal-form__btn {
+  margin-top: 40px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }

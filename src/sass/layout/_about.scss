@@ -121,6 +121,9 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 1.31;
+    &:focus {
+      outline-color: #ffb8ca;
+    }
   }
 }
 
@@ -133,39 +136,41 @@
 // about-backdrop and modal
 
 .about-backdrop {
+  display: none;
+  width: 100%;
+  height: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(235, 174, 188, 0.4);
-}
-
-.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-  transition: opacity 250ms $effect, transform 250ms $effect, visibility 250ms $effect;
+  background-color: rgba(255, 163, 185, 0.5);
 }
 
 .about-modal {
-  width: 350px;
-  height: 450px;
+
+  width: 300px;
+  height: 400px;
   max-height: 100vh;
   left: 50%;
   top: 50%;
-  // background-color: #fff;
-  border-radius: 10px;
+  border-radius: 4px;
   position: absolute;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  padding: 40px;
+  // box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
   background-color: $second-bg-color;
   transform: translate(-50%, -50%);
   transition: transform 250ms $effect;
-}
+  background: #f7c2c2;
 
-.about-modal__text {
-  margin-top: 30px;
+  &__text {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.8;
+    margin-top: 30px;
+    color: #ffffff;
+  }
 }
 
 .is-hidden {
@@ -174,36 +179,42 @@
 }
 
 .about-modal__btn {
-  width: 36px;
-  height: 36px;
-  border: 2px solid #ffffff;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #efefef;
   position: absolute;
-  top: 12px;
+  top: 10px;
   right: 10px;
   border-radius: 50%;
   background-color: transparent;
   cursor: pointer;
-}
-.about-modal__btn:hover {
-  border-color: tomato;
-  transition: border-color 250ms $effect;
+
 }
 
 .about-modal-close {
   fill: #ffffff;
+
+  &:hover,
+  &:focus {
+    border-color: tomato;
+    transition: border-color 250ms $effect;
+  }
+}
+
+.about-modal__btn:hover .modal-close__icon,
+.about-modal__btn:focus .modal-close__icon {
+  fill: tomato;
   transition: fill 250ms $effect;
 }
 
-.about-modal-close:hover {
-  fill: tomato;
-  transition: fill 250ms $effect;
+.modal-close__icon {
+  display: flex;
+  fill: #ffffff;
 }
 
 .about-picture {
   width: 200px;
   height: 200px;
-  border: 2px solid #ffffff;
-  border-radius: 10px;
-  overflow: hidden;
   margin: 0 auto;
+
 }

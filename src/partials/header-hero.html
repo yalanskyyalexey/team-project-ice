@@ -5,11 +5,27 @@
         <picture>
           <source
             srcset="
+              ./images/hero-header/logo-desktop.webp   1x,
+              ./images/hero-header/logo-desktop2x.webp 2x
+            "
+            media="(min-width: 1280px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
               ./images/hero-header/logo-desktop.png   1x,
               ./images/hero-header/logo-desktop2x.png 2x
             "
             media="(min-width: 1280px)"
             type="image/png"
+          />
+          <source
+            srcset="
+              ./images/hero-header/logo-tablet.webp    1x,
+              ./images/hero-header/logo-tablet@2x.webp 2x
+            "
+            media="(min-width: 768px)"
+            type="image/webp"
           />
           <source
             srcset="
@@ -20,6 +36,14 @@
             type="image/png"
           />
 
+          <source
+            srcset="
+              ./images/hero-header/logo-mobile.webp    1x,
+              ./images/hero-header/logo-mobile@2x.webp 2x
+            "
+            media="(min-width: 320px)"
+            type="image/webp"
+          />
           <source
             srcset="
               ./images/hero-header/logo-mobile.png    1x,
@@ -34,11 +58,11 @@
       </a>
       <button class="nav__btn" type="button" data-menu-open>
         <svg class="nav__icon-open">
-          <use href="./images/sprite.svg#icon-burger"></use>
+          <use href="./images/sprite.svg#icon-menu"></use>
         </svg>
       </button>
 
-      <button class="btn header__btn--mob btn__light" type="button">
+      <button class="btn header__btn--mob btn__light" type="button" header-modal-open>
         Buy now
         <svg class="btn__arrow">
           <use href="./images/sprite.svg#icon-vector-btn-pink" width="5" height="8"></use>
@@ -47,19 +71,19 @@
 
       <div class="nav__box" data-menu>
         <button class="nav__btn" type="button" data-menu-close>
-          <svg class="nav__icon-close" width="14" height="14">
-            <use href="./images/sprite.svg#icon-close" width="14" height="14"></use>
+          <svg class="nav__icon-close">
+            <use href="./images/sprite.svg#icon-cross"></use>
           </svg>
         </button>
 
-        <ul class="nav__list">
-          <li class="nav__item"><a class="nav__link" href="#home">Home</a></li>
-          <li class="nav__item"><a class="nav__link" href="#about">About us</a></li>
-          <li class="nav__item"><a class="nav__link" href="">How it's made?</a></li>
-          <li class="nav__item"><a class="nav__link" href="">Our products</a></li>
-          <li class="nav__item"><a class="nav__link" href="">Contact</a></li>
+        <ul class="nav__list" data-menu-link-close>
+          <li class="nav__item"><a class="nav__link current" href="#home">Home</a></li>
+          <li class="nav__item"><a class="nav__link" href="#advantages">About us</a></li>
+          <li class="nav__item"><a class="nav__link" href="#about">How it's made?</a></li>
+          <li class="nav__item"><a class="nav__link" href="#products">Our products</a></li>
+          <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
         </ul>
-        <button class="btn header__btn btn__light" type="button">
+        <button class="btn header__btn btn__light" type="button" header-modal-open-second>
           Buy now
           <svg class="btn__arrow">
             <use href="./images/sprite.svg#icon-vector-btn-pink" width="5" height="8"></use>
@@ -72,14 +96,22 @@
 <!--   hero -->
 <section class="hero">
   <div class="container">
-    <div class="hero__left">
+    <div class="hero__left animate__animated animate__bounceInLeft">
       <h1 class="hero__title">ice cream made with<span>passion</span></h1>
       <div class="hero__btns">
-        <a href="" class="hero__btn btn__accent"> Products</a>
-        <a href="" class="hero__btn btn__light">How it's made?</a>
+        <a href="#products" class="hero__btn btn__accent">Products</a>
+        <a href="#about" class="hero__btn btn__light">How it's made?</a>
       </div>
       <div class="hero__left-bottom">
         <picture class="hero__picture--milk">
+          <source
+            srcset="
+              ./images/hero-header/milk-desktop.webp    1x,
+              ./images/hero-header/milk-desktop@2x.webp 2x
+            "
+            media="(min-width: 1280px)"
+            type="image/webp"
+          />
           <source
             srcset="
               ./images/hero-header/milk-desktop.png    1x,
@@ -89,6 +121,14 @@
             type="image/png"
           />
 
+          <source
+            srcset="
+              ./images/hero-header/milk-tablet.webp    1x,
+              ./images/hero-header/milk-tablet@2x.webp 2x
+            "
+            media="(min-width: 768px)"
+            type="image/webp"
+          />
           <source
             srcset="
               ./images/hero-header/milk-tablet.png    1x,
@@ -117,6 +157,14 @@
     <picture class="hero__picture--icecream animate__animated animate__zoomInDown">
       <source
         srcset="
+          ./images/hero-header/icecream-desktop.webp    1x,
+          ./images/hero-header/icecream-desktop@2x.webp 2x
+        "
+        media="(min-width: 1280px)"
+        type="image/webp"
+      />
+      <source
+        srcset="
           ./images/hero-header/icecream-desktop.png    1x,
           ./images/hero-header/icecream-desktop@2x.png 2x
         "
@@ -126,6 +174,14 @@
 
       <source
         srcset="
+          ./images/hero-header/icecream-tablet.webp    1x,
+          ./images/hero-header/icecream-tablet@2x.webp 2x
+        "
+        media="(min-width: 768px)"
+        type="image/webp"
+      />
+      <source
+        srcset="
           ./images/hero-header/icecream-tablet.png    1x,
           ./images/hero-header/icecream-tablet@2x.png 2x
         "
@@ -133,6 +189,14 @@
         type="image/png"
       />
 
+      <source
+        srcset="
+          ./images/hero-header/icecream-mobile.webp    1x,
+          ./images/hero-header/icecream-mobile@2x.webp 2x
+        "
+        media="(min-width: 320px)"
+        type="image/webp"
+      />
       <source
         srcset="
           ./images/hero-header/icecream-mobile.png    1x,
@@ -148,6 +212,14 @@
     <picture class="hero__picture--ellipse">
       <source
         srcset="
+          ./images/hero-header/ellipse-desktop.webp    1x,
+          ./images/hero-header/ellipse-desktop@2x.webp 2x
+        "
+        media="(min-width: 1280px)"
+        type="image/webp"
+      />
+      <source
+        srcset="
           ./images/hero-header/ellipse-desktop.png    1x,
           ./images/hero-header/ellipse-desktop@2x.png 2x
         "
@@ -157,6 +229,14 @@
 
       <source
         srcset="
+          ./images/hero-header/ellipse-tablet.webp    1x,
+          ./images/hero-header/ellipse-tablet@2x.webp 2x
+        "
+        media="(min-width: 768px)"
+        type="image/webp"
+      />
+      <source
+        srcset="
           ./images/hero-header/ellipse-tablet.png    1x,
           ./images/hero-header/ellipse-tablet@2x.png 2x
         "
@@ -164,6 +244,14 @@
         type="image/png"
       />
 
+      <source
+        srcset="
+          ./images/hero-header/ellipse-mobile.webp    1x,
+          ./images/hero-header/ellipse-mobile@2x.webp 2x
+        "
+        media="(min-width: 320px)"
+        type="image/webp"
+      />
       <source
         srcset="
           ./images/hero-header/ellipse-mobile.png    1x,
@@ -186,7 +274,15 @@
           <div class="hero__circle"></div>
         </div>
       </div>
-      <picture class="hero__picture--girl">
+      <picture class="hero__picture--girl animate__animated animate__bounceInRight">
+        <source
+          srcset="
+            ./images/hero-header/girl-desktop.webp    1x,
+            ./images/hero-header/girl-desktop@2x.webp 2x
+          "
+          media="(min-width: 1280px)"
+          type="image/webp"
+        />
         <source
           srcset="
             ./images/hero-header/girl-desktop.png    1x,
@@ -196,6 +292,14 @@
           type="image/png"
         />
 
+        <source
+          srcset="
+            ./images/hero-header/girl-tablet.webp    1x,
+            ./images/hero-header/girl-tablet@2x.webp 2x
+          "
+          media="(min-width: 768px)"
+          type="image/webp"
+        />
         <source
           srcset="
             ./images/hero-header/girl-tablet.png    1x,
@@ -215,3 +319,26 @@
     <use href="./images/sprite.svg#icon-arrow-right2"></use>
   </svg>
 </button>
+
+<!-- MODAL -->
+<div class="backdrop backdrop_color is-hidden" header-data-modal>
+  <div class="modal">
+    <button class="modal__btn_close" header-modal-close>
+      <svg class="modal__btn_icon">
+        <use href="./images/sprite.svg#icon-cross"></use>
+      </svg>
+    </button>
+    <p class="modal__title">To order a <span>delicious ice cream</span>, leave us your details</p>
+    <form class="modal-form">
+      <div class="modal-form__field">
+        <label class="modal-form__label" for="name">Your name</label>
+        <input class="modal-form__input" type="text" name="name" id="name" />
+      </div>
+      <div class="modal-form__field">
+        <label class="modal-form__label" for="tel">Phone</label>
+        <input class="modal-form__input" type="tel" name="tel" id="tel" />
+      </div>
+      <button class="modal-form__btn btn btn__accent" type="submit">I want ice cream</button>
+    </form>
+  </div>
+</div>
