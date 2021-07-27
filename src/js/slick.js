@@ -1,10 +1,9 @@
 // Настройки для слайдера
 // <<<<<<< feature/slider_customer-reviews
 
-
 // Настройки для слайдера customer_review
 $('.review__slider-track').slick({
-   arrows: false,
+  arrows: false,
   slidesToShow: 1,
   slidesToScroll: 1,
   adaptiveHeight: true,
@@ -13,9 +12,8 @@ $('.review__slider-track').slick({
   autoplay: true,
   autoplaySpeed: 4000,
   dots: true,
-  dotsClass: "customer-reviews-dots"
-  
- });
+  dotsClass: 'customer-reviews-dots',
+});
 
 $('.contact-list').slick({
   autoplay: true,
@@ -36,4 +34,3 @@ $('.contact-list').slick({
     },
   ],
 });
-// >>>>>>> main
