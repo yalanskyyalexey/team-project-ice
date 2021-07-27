@@ -25,13 +25,23 @@
 
 .gallery-icon {
     margin-bottom: 5px;
-    border-radius: 24px;
+    border-radius: 10px;
     overflow: hidden;
-    height: 60px;
-    width: 60px;
+    height: 12vw;
+    width: 12vw;
+    &__main {
+        height: 72px;
+        width: 72px;
+    }
+
+    @media screen and (min-width: 480px) {
+        border-radius: 10px;
+        height: 60px;
+        width: 60px;
     &__main {
         height: 108px;
         width: 108px;
+        }
     }
 
     @media screen and (min-width: 768px) {
@@ -41,6 +51,7 @@
             height: 173px;
             width: 173px;
         }
+        border-radius: 24px;
     }
 
     @media screen and (min-width: 1280px) {
@@ -49,7 +60,7 @@
         &__main {
         height: 270px;
         width: 270px;
-    }
+        }
     }
 
     transform: scale(1, 1);
@@ -57,6 +68,6 @@
         position: relative;
         z-index: 2;
         transform: scale(1.4);
-        transition: img 250ms $effect;
+        transition: transform 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
     }
 }
