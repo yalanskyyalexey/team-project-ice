@@ -136,7 +136,7 @@
   }
   &__box {
     display: flex;
-    z-index: 4;
+    z-index: 10;
     @media screen and (max-width: 1279px) {
       position: fixed;
       top: 0;
