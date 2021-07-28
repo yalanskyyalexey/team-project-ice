@@ -1,7 +1,7 @@
 <section class="about" id="about">
   <div class="container">
     <p class="about__pre-title">Tradition and love</p>
-    <h2 class="about__title">How it’s made?</h2>
+    <h2 class="about__title animate__animated animate__bounce">How it’s made?</h2>
     <div class="about-description">
       <picture>
         <source
@@ -45,27 +45,59 @@
       </div>
     </div>
   </div>
-  <div class="about-backdrop is-hidden" about-data-menu>
-    <div class="about-modal">
-      <button type="button" class="about-modal__btn" about-modal-close>
-        <svg class="about-modal-close" width="20" height="20">
-          <use href="./images/sprite.svg#icon-menu-close"></use>
-        </svg>
-      </button>
-      <div class="about-madal__text">
-        <div class="about-picture">
-          <picture>
-            <img
-              class="about-description__image"
-              src="./images/about/about-modal-img-min.jpg"
-              alt="Cow and milk"
-            />
-          </picture>
+
+  <div class="about-backdrop is-hidd" about-modal-menu>
+    <div class="about-overlay">
+      <div class="about-modal">
+        <button type="button" class="about-modal__btn" about-modal-close>
+          <svg class="modal-close__icon" width="20" height="20">
+            <use href="./images/sprite.svg#icon-menu-close"></use>
+          </svg>
+        </button>
+        <div class="about-madal__text">
+          <div class="about-picture">
+            <picture>
+              <source
+                srcset="
+                  ./images/product/cream-desktop@2x.png 2x,
+                  ./images/product/cream-desktop.png    1x
+                "
+                media="(min-width: 1280px)"
+              />
+              <source
+                srcset="
+                  ./images/product/cream-tablet@2x.png 2x,
+                  ./images/product/cream-tablet.png    1x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./images/product/cream-mobile@2x.png 2x,
+                  ./images/product/cream-mobile.png    1x
+                "
+                media="(min-width: 320px)"
+              />
+              <img
+                class="products__img"
+                src="./images/product/cream-desktop.png"
+                alt="фото мороженого"
+              />
+            </picture>
+          </div>
+          <p class="about-modal__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, assumenda velit facilis
+            neque adipisci quis animi porro pariatur obcaecati quisquam? Nulla, assumenda velit
+            facilis.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error soluta expedita dolores
+            eveniet repellat quidem accusamus sint quo, dicta, voluptate magni id hic nihil fuga
+            minima voluptatibus pariatur, ad vero beatae! Quae atque harum, impedit culpa nihil in
+            quibusdam, iure eaque deserunt dignissimos corporis asperiores dolor? Libero ratione
+            neque quidem!
+          </p>
         </div>
-        <p class="about-modal__text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, assumenda velit facilis
-          neque adipisci quis animi porro pariatur obcaecati quisquam?
-        </p>
       </div>
     </div>
   </div>
