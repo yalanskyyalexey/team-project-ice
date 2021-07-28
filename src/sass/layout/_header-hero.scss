@@ -589,6 +589,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  opacity: 1;
+  transition: opacity 250ms $effect;
 }
 .hr-backdrop .hr-modal {
   width: 100%;
@@ -599,7 +602,8 @@
     linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+
+  border-radius: 5px;
 
   background-repeat: no-repeat;
   background-size: contain;
@@ -611,6 +615,7 @@
 
   transform: scale(1);
   transition: transform 250ms $effect;
+
   @media screen and (max-width: 767px) {
     max-width: 450px;
   }
@@ -704,7 +709,7 @@
     /* margin-bottom: 10px; */
 
     border: 1px solid rgba(212, 20, 68, 0.3);
-    border-radius: 22px;
+    border-radius: 5px;
     outline: none;
 
     transition: border-color 250ms $effect;
