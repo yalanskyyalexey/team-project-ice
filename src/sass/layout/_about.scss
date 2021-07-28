@@ -147,7 +147,7 @@
 .about-modal {
   position: absolute;
   min-width: 300px;
-  height: 660px;
+  height: 80vh;
   left: 50%;
   top: 50%;
   box-shadow: 0px 8px 30px rgb(212 20 67 / 10%);
@@ -159,10 +159,16 @@
   background-color: $second-bg-color;
   transform: translate(-50%, -50%);
   transition: transform 250ms $effect;
-  background: #f7c2c2;
-
+  background-image: url(../images/hero-header/modal-bg.png),
+    linear-gradient(to right, rgba(255, 184, 202, 0.452), rgba(255, 184, 202, 0.452)),
+    linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+  // background: #f7c2c2;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 10;
+  overflow: hidden;
   &__text {
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.8;
     margin-top: 30px;
@@ -172,11 +178,16 @@
 
   @media screen and (min-width: 480px) {
     width: 400px;
-    height: 540px;
+    height: 60vh;
   }
   @media screen and (min-width: 768px) {
     width: 528px;
   }
+}
+
+.about-modal__text ~ p {
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 .is-hidd {
@@ -190,34 +201,36 @@
 .about-modal__btn {
   position: absolute;
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
-  border: 2px solid #efefef;
+  align-items: center;
   top: 8px;
   right: 8px;
-  border-radius: 50%;
-  background-color: transparent;
+
+  width: 30px;
+  height: 30px;
+
   cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  background-color: #ffffff;
   &:hover,
   &:focus {
-    border-color: $accent;
-    transition: border-color 250ms $effect;
+    background-color: $accent;
+    // transition: background-color 250ms $effect;
   }
-}
-
-.about-modal__btn:hover .modal-close__icon,
-.about-modal__btn:focus .modal-close__icon {
-  fill: $accent;
-  transform: rotate(0.25turn);
-  transition: fill 250ms $effect, transform 250ms $effect;
 }
 
 .modal-close__icon {
   width: 100%;
   height: 100%;
+  fill: $accent;
+  transition: fill 25ms $effect, transform 250ms $effect;
+}
+
+.about-modal__btn:hover .modal-close__icon,
+.about-modal__btn:focus .modal-close__icon {
   fill: #ffffff;
+  transform: rotate(0.25turn);
   transition: fill 250ms $effect, transform 250ms $effect;
 }
 
@@ -225,4 +238,8 @@
   width: 200px;
   height: 200px;
   margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  display: flex;
+  align-items: flex-end;
 }
