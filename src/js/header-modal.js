@@ -11,9 +11,10 @@
     refs.openModalBtn.addEventListener('click', toggleModal);
     refs.openModalBtnTwo.addEventListener('click', toggleModal);
 
-  refs.closeModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtnDrop.addEventListener('click', toggleModal);  function toggleModal() {
-    refs.modal.classList.toggle('is-hidden');
+    refs.closeModalBtn.addEventListener('click', toggleModal);
+    refs.closeModalBtnDrop.addEventListener('click', toggleModal);
+    function toggleModal() {
+      refs.modal.classList.toggle('is-hidden');
   }
 })();
 
