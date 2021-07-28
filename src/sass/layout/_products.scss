@@ -24,6 +24,7 @@
     &:focus {
       transform: scale(1.5);
       transition: transform 250ms $effect;
+
     }
 
     @media screen and (min-width: 768px) {
@@ -179,8 +180,10 @@
 }
 .products__button:hover .products__swg,
 .products__button:focus .products__swg {
+
   transform: scale(2);
   transition: transform 250ms $effect;
+
 }
 
 .products__list:not(:last-child) {
