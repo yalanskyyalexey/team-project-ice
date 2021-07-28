@@ -25,7 +25,7 @@
   transition: opacity 250ms $effect;
   bottom: 40px;
   right: 20px;
-  z-index: 9999;
+  z-index: 9;
   width: 40px;
   height: 40px;
   line-height: 30px;
@@ -136,7 +136,7 @@
   }
   &__box {
     display: flex;
-    z-index: 4;
+    z-index: 10;
     @media screen and (max-width: 1279px) {
       position: fixed;
       top: 0;
