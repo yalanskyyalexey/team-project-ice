@@ -188,7 +188,15 @@
   top: 0;
   left: 0;
 }
-
+.products-backdrop_pink {
+  background-color: rgba(255, 163, 185, 0.4);
+}
+.products-backdrop_braun {
+  background-color: rgb(243 223 196 / 40%);
+}
+.products-backdrop_green {
+  background-color: rgb(190 212 161 / 40%);
+}
 .products-modal {
   width: 320px;
   height: 400px;
