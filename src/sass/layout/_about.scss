@@ -189,30 +189,36 @@
 
 .about-modal__btn {
   position: absolute;
-  width: 36px;
-  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
   border: 2px solid #efefef;
-  top: 10px;
-  right: 10px;
+  top: 8px;
+  right: 8px;
   border-radius: 50%;
   background-color: transparent;
   cursor: pointer;
   &:hover,
   &:focus {
-    border-color: tomato;
+    border-color: $accent;
     transition: border-color 250ms $effect;
   }
 }
 
 .about-modal__btn:hover .modal-close__icon,
 .about-modal__btn:focus .modal-close__icon {
-  fill: tomato;
-  transition: fill 250ms $effect;
+  fill: $accent;
+  transform: rotate(0.25turn);
+  transition: fill 250ms $effect, transform 250ms $effect;
 }
 
 .modal-close__icon {
-  display: flex;
+  width: 100%;
+  height: 100%;
   fill: #ffffff;
+  transition: fill 250ms $effect, transform 250ms $effect;
 }
 
 .about-picture {
