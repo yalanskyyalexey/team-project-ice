@@ -243,6 +243,7 @@
   }
   @media screen and (min-width: 768px){
     width: 528px;
+
   }
 }
 
@@ -405,28 +406,32 @@
   transform: translate(-50%, -50%);
   background-color: #ffb8ca;
   border-radius: 5px;
-  // box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   width: 300px;
-  height: 540px;
-  // @media screen and (min-width: 468px){
-  //   width: 400px;
-  //   height: 540px;
-  // }
+  height: 855px;
+  padding: 30px 20px;
+  @media screen and (min-width: 480px){
+    width: 450px;
+    height: 855px;
+    padding: 30px 40px;
+  }
   @media screen and (min-width: 768px){
     width: 700px;
+    height: 380px;
+    padding: 30px;
   }
   @media screen and (min-width: 1280px){
     width: 1200px;
+    height: 580px;
   }
 }
 
 .location-item {
-  margin: 30px;
+  margin: 5px;
   padding: 20px;
   background: $main-bg-color;
   // box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-  border-radius: 10px;
-  width: 100%;
+  border-radius: 5px;
+  max-width: 100%;
   &__title {
     display: inline-block;
     padding-left: 25px;
@@ -441,26 +446,71 @@
     text-transform: uppercase;
     color: $main-bg-color;
     background-color: #F0D1A5;
+    @media screen and (min-width: 1280px){
+      font-size: 16px;
+      line-height: 1.88;
+    }
     &.colored{
       background-color: #C2E297;
     }
   }
   &__city {
+    margin-bottom: 10px;
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 1.83;
+    @media screen and (min-width: 1280px){
+      font-size: 14px;
+      line-height: 1.86;
+      margin-bottom: 14px;
+      
+    }
   }
-  
+  // transform: scale(1, 1);
+  //   &:hover {
+  //     position: relative;
+  //     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  //     z-index: 2;
+  //     transform: scale(1.4);
+  //     transition: transform 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  //   }
 }
 
 .close {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+  max-width: 100%;
+  
+}
+
+.location-link {
+  max-width: 100%;
+  max-height: 100%;
+  transform: scale(1, 1);
+    &:hover {
+      position: relative;
+      box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.7);
+      z-index: 2;
+      transform: scale(1.4);
+      transition: transform 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    }
+  @media screen and (min-width: 480px) {
+    height: 250px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (min-width: 768px) {
+    height: 200px;
+  }
+  @media screen and (min-width: 1280px) {
+    height: 400px;
+    width: 320px;
+  }
 }
 
 .location-window__close-btn {
