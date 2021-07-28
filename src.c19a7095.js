@@ -3,4 +3,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{"./../images/hero-header/modal-bg.png":[["modal-bg.101e3c3f.png","TFsg"],"TFsg"],"./../images/about/milkbg-mobile.png":[["milkbg-mobile.4885269c.png","B5aA"],"B5aA"],"./../images/about/milkbg-mobile@2x.png":[["milkbg-mobile@2x.8c339692.png","ME0H"],"ME0H"],"./../images/about/milkbg-desktop.png":[["milkbg-desktop.1f5b13e4.png","ynVR"],"ynVR"],"./../images/about/milkbg-desktop@2x.png":[["milkbg-desktop@2x.25d063ce.png","Ivnz"],"Ivnz"],"./../images/customer-reviews/1.png":[["1.ff37e84f.png","c40e"],"c40e"],"./../images/contacts/contacts-bg.png":[["contacts-bg.6fd30241.png","M02S"],"M02S"]}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss");
 },{"./sass/main.scss":"clu1"}]},{},["Focm"], null)
-//# sourceMappingURL=/team-project-ice/src.70d629eb.js.map
+//# sourceMappingURL=/team-project-ice/src.c19a7095.js.map
