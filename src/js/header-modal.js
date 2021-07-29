@@ -1,11 +1,11 @@
 (() => {
   const refs = {
-    openModalBtn: document.querySelector('[header-modal-open]'),
-    openModalBtnTwo: document.querySelector('[header-modal-open-second]'),
+    openModalBtn: document.querySelector('[data-header-modal-open]'),
+    openModalBtnTwo: document.querySelector('[data-header-modal-open-second]'),
 
-    closeModalBtn: document.querySelector('[header-modal-close]'),
-    closeModalBtnDrop: document.querySelector('[header-modal-drop-close]'),
-    modal: document.querySelector('[header-data-modal]'),
+    closeModalBtn: document.querySelector('[data-header-modal-close]'),
+    closeModalBtnDrop: document.querySelector('[data-header-modal-drop-close]'),
+    modal: document.querySelector('[data-header-data-modal]'),
   };
 
     refs.openModalBtn.addEventListener('click', toggleModal);
