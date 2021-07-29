@@ -1,30 +1,19 @@
 .contact {
   position: relative;
-  background-image: linear-gradient(
-    to top,
-    #FFF5F6 82%,
-    #ffffff 18%
-  );
+  background-image: linear-gradient(to top, #fff5f6 82%, #ffffff 18%);
   padding-top: 43px;
   padding-bottom: 57px;
-  @media screen and (min-width: 370px){
+  @media screen and (min-width: 370px) {
     padding-left: 40px;
     padding-right: 40px;
   }
   @media screen and (min-width: 768px) {
     padding-bottom: 79px;
-    background-image: linear-gradient(
-    to top,
-    #FFF5F6 84%,
-    #ffffff 16%
-  );
+    background-image: linear-gradient(to top, #fff5f6 84%, #ffffff 16%);
   }
   @media screen and (min-width: 1280px) {
-    background-image:url(../images/contacts/contacts-bg.png),
-    linear-gradient(
-    to top,
-    #FFF5F6 84%,
-    #ffffff 16%);
+    background-image: url(../images/contacts/contacts-bg.png),
+      linear-gradient(to top, #fff5f6 84%, #ffffff 16%);
     background-repeat: no-repeat;
     background-position: 100% 40%;
     background-size: contain;
@@ -32,10 +21,9 @@
   // z-index: -1;
 }
 
-
-.contact-list{ 
+.contact-list {
   margin-bottom: 55px;
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-between;
     margin-bottom: 81px;
@@ -48,15 +36,15 @@
     border-radius: 24px;
     &:not(:last-child) {
       margin-bottom: 20px;
-      @media screen and (min-width: 768px){
+      @media screen and (min-width: 768px) {
         margin-bottom: unset;
         margin-right: 20px;
       }
     }
-    @media screen and (min-width: 768px){
+    @media screen and (min-width: 768px) {
       padding: 50px 32px;
       width: 100%;
-      margin:unset;
+      margin: unset;
       margin-left: unset;
       margin-right: unset;
     }
@@ -73,27 +61,26 @@
     line-height: 1.83;
     text-transform: uppercase;
     color: $main-bg-color;
-    background-color: #F0D1A5;
-    @media screen and (min-width: 768px){
+    background-color: #f0d1a5;
+    @media screen and (min-width: 768px) {
       font-size: 16px;
       line-height: 1.88;
       margin-bottom: 30px;
     }
   }
-  &__title.colored{
-      background-color: #C2E297;
-    }
+  &__title.colored {
+    background-color: #c2e297;
+  }
   &__city {
     margin-bottom: 10px;
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 1.83;
-    @media screen and (min-width: 768px){
+    @media screen and (min-width: 768px) {
       font-size: 14px;
       line-height: 1.86;
       margin-bottom: 14px;
-      
     }
   }
   &__text {
@@ -102,23 +89,23 @@
     font-weight: 500;
     font-size: 12px;
     color: $second-text-color;
-    @media screen and (min-width: 768px){
+    @media screen and (min-width: 768px) {
       font-size: 14px;
       line-height: 1.64;
     }
-      &::after {
-        display: block;
-        content: "";
-        width: 100%;
-        height: 1px;
-        border: 1px solid #E1E1E1;
-        margin-bottom: 25px;
-        margin-top: 25px;
-        @media screen and (min-width: 768px){
-          margin-bottom: 30px;
-          margin-top: 30px;
-        }
+    &::after {
+      display: block;
+      content: '';
+      width: 100%;
+      height: 1px;
+      border: 1px solid #e1e1e1;
+      margin-bottom: 25px;
+      margin-top: 25px;
+      @media screen and (min-width: 768px) {
+        margin-bottom: 30px;
+        margin-top: 30px;
       }
+    }
   }
 
   &__working-days {
@@ -126,7 +113,7 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 1.83;
-    @media screen and (min-width: 768px){
+    @media screen and (min-width: 768px) {
       font-size: 14px;
       line-height: 1.86;
     }
@@ -136,7 +123,7 @@
     font-size: 12px;
     line-height: 1.83;
     color: $section-text-color;
-    @media screen and (min-width: 768px){
+    @media screen and (min-width: 768px) {
       font-size: 14px;
       line-height: 1.64;
     }
@@ -145,7 +132,7 @@
   // разобраться с отступом
   &__working-time:not(:last-child) {
     margin-bottom: 10px;
-    @media screen and (min-width: 768px){
+    @media screen and (min-width: 768px) {
       margin-bottom: 15px;
     }
   }
@@ -155,23 +142,22 @@
     font-weight: 500;
     font-size: 12px;
     color: $second-text-color;
-    @media screen and (min-width: 768px){
+    @media screen and (min-width: 768px) {
       font-size: 14px;
       line-height: 1.64;
     }
-      
   }
 }
 
 .contact-box::before {
   display: block;
-  content: "";
+  content: '';
   width: 100%;
   height: 1px;
-  border: 1px solid #E1E1E1;
+  border: 1px solid #e1e1e1;
   margin-bottom: 25px;
   margin-top: 25px;
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 768px) {
     margin-bottom: 30px;
     margin-top: 30px;
   }
@@ -194,7 +180,7 @@
   @media screen and (min-width: 768px) {
     margin: 0;
   }
-  
+
   &.btn__accent {
     color: $main-bg-color;
     margin-bottom: 10px;
@@ -215,7 +201,6 @@
       padding-left: 38px;
       padding-right: 38px;
     }
-    
   }
 }
 
@@ -226,28 +211,26 @@
 
 // -----------MODAL-----------
 
-
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   // background-color: #ffb8ca;
-  background-image: url(../images/hero-header/modal-bg.png), linear-gradient(to right, rgba(255, 184, 202, 0.452), rgba(255, 184, 202, 0.452)), linear-gradient(to right, white, white);
+  background-image: url(../images/hero-header/modal-bg.png),
+    linear-gradient(to right, rgba(255, 184, 202, 0.452), rgba(255, 184, 202, 0.452)),
+    linear-gradient(to right, white, white);
   background-repeat: no-repeat;
   background-size: contain;
   border-radius: 5px;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   min-width: 300px;
-  height: 550px;
-  @media screen and (min-width: 480px){
+  // height: 550px;
+  @media screen and (min-width: 480px) {
     width: 400px;
-    height: 590px;
   }
-  @media screen and (min-width: 768px){
-    width: 650px;
-    height: 670px;
-
+  @media screen and (min-width: 768px) {
+    width: 500px;
   }
   z-index: 10;
 }
@@ -267,7 +250,7 @@
   visibility: hidden;
 }
 
-.close-btn{
+.close-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -280,10 +263,10 @@
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  &:hover{
+  &:hover {
     background-color: $accent;
   }
-  &:hover .close-icon{
+  &:hover .close-icon {
     border-color: $accent;
     fill: $accent;
   }
@@ -291,9 +274,9 @@
 
 .close-icon {
   width: 100%;
-    height: 100%;
-    fill: $accent;
-    transition: fill 25ms $effect, transform 250ms $effect;
+  height: 100%;
+  fill: $accent;
+  transition: fill 25ms $effect, transform 250ms $effect;
   .close-btn:hover & {
     fill: #ffffff;
     transform: rotate(0.25turn);
@@ -304,11 +287,11 @@
   padding: 40px 25px;
   padding-top: 50px;
   @media screen and (min-width: 480px) {
-    padding-top: 85px;
+    padding-top: 60px;
   }
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 768px) {
     padding: 40px;
-    padding-top: 170px;
+    padding-top: 50px;
   }
   &__title {
     // display: inline-block;
@@ -320,7 +303,8 @@
     font-size: 20px;
     line-height: 1.15;
     text-align: center;
-    color: $accent  ;
+    color: $accent;
+    padding: 26px;
   }
 }
 
@@ -352,7 +336,7 @@
     outline: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 5px;
-    
+
     transition: border-color 250ms $effect;
   }
 
@@ -375,7 +359,6 @@
 }
 
 .form-group__textarea::placeholder {
-
   font-weight: normal;
   font-size: 12px;
   line-height: 1.17;
@@ -392,7 +375,7 @@
   height: 120px;
 
   transition: border-color 250ms $effect;
-  
+
   &:focus,
   &:hover {
     border-color: $accent;
@@ -409,7 +392,7 @@
 
   transition-property: color, background-color;
   transition-duration: 250ms;
-  transition-timing-function:$effect;
+  transition-timing-function: $effect;
 
   &:hover {
     background-color: $accent;
@@ -429,15 +412,15 @@
   width: 300px;
 
   padding: 30px 20px;
-  @media screen and (min-width: 480px){
+  @media screen and (min-width: 480px) {
     width: 450px;
     padding: 30px 40px;
   }
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 768px) {
     width: 700px;
     padding: 30px;
   }
-  @media screen and (min-width: 1280px){
+  @media screen and (min-width: 1280px) {
     width: 1200px;
   }
   z-index: 10;
@@ -463,11 +446,11 @@
     text-transform: uppercase;
     color: $main-bg-color;
     background-color: rgb(239, 208, 163, 0.9);
-    @media screen and (min-width: 1280px){
+    @media screen and (min-width: 1280px) {
       font-size: 16px;
       line-height: 1.88;
     }
-    &.colored{
+    &.colored {
       background-color: rgb(194, 226, 151, 0.9);
     }
   }
@@ -477,14 +460,12 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 1.83;
-    @media screen and (min-width: 1280px){
+    @media screen and (min-width: 1280px) {
       font-size: 14px;
       line-height: 1.86;
       margin-bottom: 14px;
-      
     }
   }
-
 }
 
 .close {
@@ -494,7 +475,6 @@
     justify-content: space-between;
   }
   max-width: 100%;
-  
 }
 
 .location-link {
@@ -503,13 +483,13 @@
   border-radius: 5px;
   transform: scale(1, 1);
   transition: transform 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
-    &:hover {
-      position: relative;
-      box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.7);
-      z-index: 2;
-      transform: scale(1.4);
-      transition: transform 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
-    }
+  &:hover {
+    position: relative;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.7);
+    z-index: 2;
+    transform: scale(1.4);
+    transition: transform 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  }
   @media screen and (min-width: 480px) {
     height: 150px;
     display: flex;
@@ -544,13 +524,12 @@
 }
 
 .location-window__icon-btn {
-    width: 100%;
-    height: 100%;
-    fill: $accent;
-    transition: fill 25ms $effect, transform 250ms $effect;
-    .location-window__close-btn:hover & {
-      fill: #ffffff;
-      transform: rotate(0.25turn);
-    }
+  width: 100%;
+  height: 100%;
+  fill: $accent;
+  transition: fill 25ms $effect, transform 250ms $effect;
+  .location-window__close-btn:hover & {
+    fill: #ffffff;
+    transform: rotate(0.25turn);
   }
-
+}
