@@ -2,9 +2,6 @@
   text-align: center;
   padding-top: 91px;
   padding-bottom: 98px;
-  @media screen and (min-width: 480px) {
-    width: 100%;
-  }
   @media screen and (min-width: 768px) {
     padding-top: 122px;
     padding-bottom: 112px;
@@ -24,7 +21,6 @@
     &:focus {
       transform: scale(1.5);
       transition: transform 250ms $effect;
-
     }
 
     @media screen and (min-width: 768px) {
@@ -80,9 +76,10 @@
   }
   .products__list {
     position: relative;
-    max-width: 280px;
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
+    align-items: center;
 
     @media screen and (min-width: 768px) {
       max-width: 220px;
@@ -101,8 +98,9 @@
     position: absolute;
     overflow: hidden;
     top: -110px;
-    margin-left: 15px;
-    margin-right: 16px;
+    width: 100%;
+    align-items: center;
+
     @media screen and (min-width: 1280px) {
       top: -185px;
     }
@@ -180,10 +178,8 @@
 }
 .products__button:hover .products__swg,
 .products__button:focus .products__swg {
-
   transform: scale(2);
   transition: transform 250ms $effect;
-
 }
 
 .products__list:not(:last-child) {
